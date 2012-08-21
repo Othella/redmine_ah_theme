@@ -1,0 +1,51 @@
+/* load the default Redmine stylesheet */
+@import url(../../../stylesheets/application.css);
+/* load boostrap */
+@import url('../bootstrap/less/bootstrap.less');
+
+// ah Colors
+// -------------------------
+
+// rgb(0, 122, 160)
+@ah_blue : #007aa0;
+
+// rgb(149, 168, 160)
+@ah_lblue : #95a8a0;
+
+// rgb(207, 202, 180)
+@ah_beige : #cfcab4;
+
+// rgb(239, 223, 206)
+@ah_lbeige : #efdfce;
+
+// rgb(229, 96, 69)
+@ah_orange : #e56045;
+
+#top-menu {
+    background-color : @ah_blue;
+}
+
+#header {
+    background-image    : url("../images/logo_icon_small.png");
+    background-position : 20px 10px;
+    background-repeat   : no-repeat;
+    background-color    : @ah_lblue;
+    padding             : 0 0 0 140px;
+    height              : 150px;
+
+    #quick-search {
+        background-color : @ah_blue;
+        padding          : 0 10px;
+        .border-radius(0 0 0 5px);
+    }
+
+    #main-menu {
+        & > ul {
+            & > li {
+                & > a {
+                    .border-radius(5px 5px 0 0);
+                }
+            }
+        }
+    }
+}
