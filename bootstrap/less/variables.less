@@ -6,6 +6,14 @@
 // Global values
 // --------------------------------------------------
 
+// ah Colors
+// -------------------------
+
+@ah_blue : #007aa0; // rgb(0, 122, 160)
+@ah_lblue : #95a8a0; // rgb(149, 168, 160)
+@ah_beige : #cfcab4; // rgb(207, 202, 180)
+@ah_lbeige : #efdfce; // rgb(239, 223, 206)
+@ah_orange : #e56045; // rgb(229, 96, 69)
 
 // Grays
 // -------------------------
@@ -38,8 +46,8 @@
 
 // Links
 // -------------------------
-@linkColor:             #08c;
-@linkColorHover:        darken(@linkColor, 15%);
+@linkColor:             @ah_blue;
+@linkColorHover:        @ah_orange;
 
 
 // Typography
@@ -158,25 +166,25 @@
 
 @navbarHeight:                    40px;
 @navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
-@navbarBackgroundHighlight:       #ffffff;
+@navbarBackgroundHighlight:       @ah_blue;
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
-@navbarText:                      @gray;
-@navbarLinkColor:                 @gray;
-@navbarLinkColorHover:            @grayDark;
-@navbarLinkColorActive:           @gray;
+@navbarText:                      @ah_lbeige;
+@navbarLinkColor:                 @ah_lbeige;
+@navbarLinkColorHover:            @white;
+@navbarLinkColorActive:           @ah_lbeige;
 @navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
+@navbarLinkBackgroundActive:      darken(@navbarBackground, 15%);
 
-@navbarBrandColor:                @navbarLinkColor;
+@navbarBrandColor:                darken(@ah_blue, 15%);
 
 // Inverted navbar
-@navbarInverseBackground:                #111111;
-@navbarInverseBackgroundHighlight:       #222222;
-@navbarInverseBorder:                    #252525;
+@navbarInverseBackground:                darken(@navbarInverseBackgroundHighlight, 5%);
+@navbarInverseBackgroundHighlight:       @ah_orange;
+@navbarInverseBorder:                    darken(@navbarInverseBackground, 12%);
 
-@navbarInverseText:                      @grayLight;
-@navbarInverseLinkColor:                 @grayLight;
+@navbarInverseText:                      @ah_lblue;
+@navbarInverseLinkColor:                 @ah_lblue;
 @navbarInverseLinkColorHover:            @white;
 @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
 @navbarInverseLinkBackgroundHover:       transparent;
