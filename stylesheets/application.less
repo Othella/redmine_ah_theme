@@ -44,11 +44,11 @@ h1, h2, h3, h4, h5, h6 {
             background-position : 10px 50%;
             background-repeat   : no-repeat;
             &.home { background-image : url("../img/top-menu-icons/home.png"); }
-            &.my-page { background-image: url("../img/top-menu-icons/page.png"); }
+            &.my-page { background-image : url("../img/top-menu-icons/page.png"); }
             &.projects { background-image : url("../img/top-menu-icons/wallet.png"); }
             &.administration { background-image : url("../img/top-menu-icons/admin.png"); }
             &.help { background-image : url("../img/top-menu-icons/help.png"); }
-            &.logout {background-image : url("../img/top-menu-icons/eject.png"); }
+            &.logout { background-image : url("../img/top-menu-icons/eject.png"); }
             &.my-account { background-image : url("../img/top-menu-icons/account.png"); }
         }
     }
@@ -142,9 +142,12 @@ h1, h2, h3, h4, h5, h6 {
 /***** Redmine generated elements ****/
 
 #admin-menu {
-    ul { }
-    li { }
+    ul { margin : 0; }
+    li { list-style : none; padding : 0 0 6px 0; margin : 0; }
     a {
+        background-position : 0 40%;
+        background-repeat   : no-repeat;
+        padding             : 2px 0 3px 20px;
         &.projects { background-image : url(../img/icons/projects.png); }
         &.users { background-image : url(../img/icons/user.png); }
         &.groups { background-image : url(../img/icons/group.png); }

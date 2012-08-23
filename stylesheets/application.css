@@ -984,7 +984,9 @@ h1,h2,h3,h4,h5,h6{text-shadow:0 -1px 0 #dddddd,0 1px 0 #ffffff;font-family:Baske
 #sidebar form label{display:inline-block;}
 #footer{text-align:center;}
 .well{border:#e56045;}.well h3{margin-top:0;}
-#admin-menu a.projects{background-image:url(../img/icons/projects.png);}
+#admin-menu ul{margin:0;}
+#admin-menu li{list-style:none;padding:0 0 6px 0;margin:0;}
+#admin-menu a{background-position:0 40%;background-repeat:no-repeat;padding:2px 0 3px 20px;}#admin-menu a.projects{background-image:url(../img/icons/projects.png);}
 #admin-menu a.users{background-image:url(../img/icons/user.png);}
 #admin-menu a.groups{background-image:url(../img/icons/group.png);}
 #admin-menu a.roles{background-image:url(../img/icons/database_key.png);}
