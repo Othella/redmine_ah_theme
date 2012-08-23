@@ -1060,7 +1060,8 @@ span.add_attachment a{padding-left:16px;background:url(../img/icons/bullet_add.p
 .highlight.token-1{background-color:#f2dede;}
 .highlight.token-2{background-color:#dff0d8;}
 .highlight.token-3{background-color:#d9edf7;}
-.contextual{float:right;}
+.contextual{float:right;white-space:nowrap;line-height:1.4em;margin-top:5px;padding-left:5px;font-size:.9em;}.contextual input,.contextual select{font-size:.9em;}
+.message .contextual{margin-top:0;}
 p.cal.legend .starting{background:url(../img/icons/bullet_go.png) no-repeat -1px -2px;padding-left:16px;}
 p.cal.legend .ending{background:url(../img/icons/bullet_end.png) no-repeat -1px -2px;padding-left:16px;}
 p.cal.legend .starting.ending{background:url(../img/icons/bullet_diamond.png) no-repeat -1px -2px;padding-left:16px;}
@@ -1111,7 +1112,7 @@ span.required{color:#9d261d;}
 .version.marker,.project.marker{background-image:url("../img/icons/version_marker.png");background-repeat:no-repeat;border:0;margin-left:-4px;margin-top:1px;}
 .version-behind-schedule a,.issue-behind-schedule a{color:#f89406;}
 .version-overdue a,.issue-overdue a,.project-overdue a{color:#9d261d;}
-.icon{background-position:0% 50%;background-repeat:no-repeat;padding-left:20px;padding-top:2px;padding-bottom:3px;}
+.icon{background-position:0% 50%;background-repeat:no-repeat;padding-left:20px;padding-top:2px;padding-bottom:3px;display:inline;}
 .icon-add{background-image:url(../img/icons/add.png);}
 .icon-edit{background-image:url(../img/icons/edit.png);}
 .icon-copy{background-image:url(../img/icons/copy.png);}
