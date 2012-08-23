@@ -966,7 +966,13 @@ h1,h2,h3,h4,h5,h6{text-shadow:0 -1px 0 #dddddd,0 1px 0 #ffffff;font-family:Baske
 #top-menu a.brand{float:right;color:#004054;}
 #top-menu #account,#top-menu #loggedas{float:right;}
 #top-menu #loggedas{color:#efdfce;padding:10px 15px 10px;}
-#top-menu ul.nav{margin:0 10px 0 0;}
+#top-menu ul.nav{margin:0 10px 0 0;}#top-menu ul.nav li a{padding-left:36px;background-position:10px 50%;background-repeat:no-repeat;}#top-menu ul.nav li a.home{background-image:url("../img/top-menu-icons/home.png");}
+#top-menu ul.nav li a.my-page{background-image:url("../img/top-menu-icons/page.png");}
+#top-menu ul.nav li a.projects{background-image:url("../img/top-menu-icons/wallet.png");}
+#top-menu ul.nav li a.administration{background-image:url("../img/top-menu-icons/admin.png");}
+#top-menu ul.nav li a.help{background-image:url("../img/top-menu-icons/help.png");}
+#top-menu ul.nav li a.logout{background-image:url("../img/top-menu-icons/eject.png");}
+#top-menu ul.nav li a.my-account{background-image:url("../img/top-menu-icons/account.png");}
 #header h1{background:transparent url('../img/logo_small.png') 10px -10px no-repeat;text-shadow:0 -1px 0 #6c847a,0 1px 0 #bfcac6 ;padding:20px 10px 20px 150px;}
 #quick-search>select,#quick-search .form-search{float:right;margin:6px;}
 #quick-search .form-search label{display:none;}

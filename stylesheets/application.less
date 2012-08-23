@@ -39,6 +39,18 @@ h1, h2, h3, h4, h5, h6 {
     }
     ul.nav {
         margin : 0 10px 0 0;
+        li a {
+            padding-left        : 36px;
+            background-position : 10px 50%;
+            background-repeat   : no-repeat;
+            &.home { background-image : url("../img/top-menu-icons/home.png"); }
+            &.my-page { background-image: url("../img/top-menu-icons/page.png"); }
+            &.projects { background-image : url("../img/top-menu-icons/wallet.png"); }
+            &.administration { background-image : url("../img/top-menu-icons/admin.png"); }
+            &.help { background-image : url("../img/top-menu-icons/help.png"); }
+            &.logout {background-image : url("../img/top-menu-icons/eject.png"); }
+            &.my-account { background-image : url("../img/top-menu-icons/account.png"); }
+        }
     }
 }
 
