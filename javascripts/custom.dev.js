@@ -111,6 +111,15 @@ function ahInjectClasses() {
 
 }
 
+/**
+ * Miscellaneous customizations
+ */
+function ahCustomizeMisc() {
+
+    // Open help in new tab
+    $('#top-menu .help').attr('target', '_blank');
+}
+
 $(document).ready(function () {
 
     /***** Customize the layout to use Bootstrap *****/
@@ -119,6 +128,7 @@ $(document).ready(function () {
     ahRebuildHeader();
     ahCustomizeMain();
     ahInjectClasses();
+    ahCustomizeMisc()
 });
 
 
