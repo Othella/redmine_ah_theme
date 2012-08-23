@@ -787,9 +787,13 @@ body.controller-versions.action-show div#roadmap .related-issues { }
 
 ul {
     &.projects {
-        ul { }
-        &.root { }
-        li { }
+        padding-left : 1em;
+        ul { padding-left : 1.6em; }
+        &.root {
+            margin  : 0;
+            padding : 0;
+        }
+        li { list-style : none; }
     }
     &.properties {
         li {
@@ -800,15 +804,24 @@ ul {
 
 #projects-index {
     ul.projects {
-        ul.projects { }
-        li {
-            &.root { }
-            &.child { }
+        ul.projects {
+            padding-left : 1em;
+            border-left  : @ah_lbeige solid 3px;
         }
-        div.root a.project { }
+        li {
+            &.root { margin-bottom : 1em; }
+            &.child { margin-top : 1em; }
+        }
+        div.root a.project {
+            font-size   : 1.2em;
+            font-weight : bold;
+        }
     }
 }
-.my-project { padding-left : 18px; background : url(../img/ivons/fav.png) no-repeat 0 50%; }
+.my-project {
+    padding-left : 21px;
+    background   : url(../img/icons/fav.png) no-repeat 0 50%;
+}
 #notified-projects ul { }
 #tracker_project_ids ul { }
 
