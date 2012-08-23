@@ -1,15 +1,20 @@
+/***** Imports ****/
 /* load boostrap and make layout responsive */
 @import url('../bootstrap/less/bootstrap.less');
 @import url('../bootstrap/less/responsive.less');
 
+/***** Common ****/
+
 body {
-    background : #fff url('../images/white_paper_texture_background_seamless_pattern.jpg') top left repeat fixed;
+    background : #fff url('../img/white_paper_texture_background_seamless_pattern.jpg') top left repeat fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
     text-shadow : 0 -1px 0 #ddd, 0 1px 0 #fff; // Letterpress effect
     font-family : Baskerville, Georgia, "Times New Roman", sans-serif;
 }
+
+/***** Top Menu ****/
 
 #top-menu {
     background  : @navbarBackground;
@@ -37,9 +42,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/***** Header ****/
+
 #header {
     h1 {
-        background  : transparent url('../images/logo_small.png') 10px -10px no-repeat;
+        background  : transparent url('../img/logo_small.png') 10px -10px no-repeat;
         text-shadow : 0 -1px 0 darken(@ah_lblue, 15%), 0 1px 0 lighten(@ah_lblue, 15%) /* Letterpress effect */;
         padding     : 20px 10px 20px 150px;
     }
@@ -59,12 +66,17 @@ h1, h2, h3, h4, h5, h6 {
     a {
         background-color : @white;
         margin-right     : 10px;
+        &:hover {
+            background-color : #eee;
+        }
         &.selected {
             background-color : @ah_blue;
             color            : @white;
         }
     }
 }
+
+/***** Main ****/
 
 #main {
     background-color : #fff;
@@ -76,10 +88,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #content {
     .contextual {
+        float : right;
     }
-    .noleftmargin {
-        margin-left : 0;
-    }
+    .noleftmargin { margin-left : 0; }
 }
 
 #sidebar {
@@ -93,9 +104,50 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/***** Footer ****/
+
 #footer {
     text-align : center;
 }
+
+/***** Utilities ****/
+.well {
+    border : @ah_orange;
+    h3 { margin-top : 0; }
+}
+
+fieldset.collapsible {
+    &.collapsed legend { }
+    legend { }
+}
+
+dt {
+    &.attachment { }
+}
+
+span.search_for_watchers, span.add_attachment {
+    a { }
+}
+
+button {
+    &.tab-left { }
+    &.tab-right { }
+}
+
+tr {
+    &.project {
+        &.idnt td.name span {
+        }
+    }
+    &.issue {
+        &.idnt td.subject a {
+        }
+    }
+    span.expander { }
+    &.open span.expander { }
+}
+
+/***** Media Queries ****/
 
 @media (max-width: 767px) {
 }

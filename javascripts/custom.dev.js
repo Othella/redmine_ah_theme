@@ -108,6 +108,7 @@ function ahInjectClasses() {
 
     // Use btn class for submit inputs
     $('input[type="submit"]').addClass('btn');
+
 }
 
 $(document).ready(function () {
