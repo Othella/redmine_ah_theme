@@ -94,6 +94,7 @@ h1, h2, h3, h4, h5, h6 {
     a {
         background-color : @white;
         margin-right     : 10px;
+        .box-shadow(0 0 5px rgba(0,0,0,.1));
         &:hover {
             background-color : #eee;
         }
@@ -779,24 +780,50 @@ div {
         p { }
     }
     &#search-results {
+        margin-left : 1em;
         dd {
-            .description { }
+            margin-bottom : 1em;
+            padding-left  : 18px;
+            font-size     : .9em;
+            .description { font-style : italic; }
         }
         dt {
+            background-position : 0 50%;
+            background-repeat   : no-repeat;
+            padding-left        : 20px;
+            line-height         : 1.5;
             &.issue.closed { background-image : url(../img/icons/ticket_checked.png); }
         }
         span.project:after { content : " -"; }
-        span.description { }
+        span.description {
+            display : block;
+            color   : @grayLight;
+        }
     }
     &#activity {
-        dl { }
+        dl { margin-left : 1em; }
         dd {
-            .description { }
-            span.description { }
+            margin-bottom : 1em;
+            padding-left  : 18px;
+            font-size     : .9em;
+            .description { font-style : italic; }
+            span.description {
+                display : block;
+                color   : @grayLight;
+            }
         }
         dt {
-            &.me .time { }
-            .time { }
+            clear               : left;
+            background-position : 0 50%;
+            background-repeat   : no-repeat;
+            padding-left        : 20px;
+            line-height         : 1.5em;
+            img.gravatar { float : left; margin : 0 1em 1em 0; }
+            &.me .time { border-bottom : 1px solid @ah_lblue; }
+            .time {
+                color     : @ah_lblue;
+                font-size : .9em;
+            }
         }
         span {
             .project:after { content : " -"; }
@@ -1233,12 +1260,11 @@ img.ui-datepicker-trigger { }
 }
 .icon-gravatar { }
 
-img.gravatar { }
-
-#activity {
-    dt {
-        img.gravatar { float : left; margin : 0 1em 1em 0; }
-    }
+img.gravatar {
+    padding          : 2px;
+    border           : solid 1px @grayLighter;
+    background-color : @white;
+    vertical-align   : middle;
 }
 
 .hascontextmenu { cursor : context-menu; }
