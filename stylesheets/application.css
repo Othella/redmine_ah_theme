@@ -978,7 +978,7 @@ h1,h2,h3,h4,h5,h6{text-shadow:0 -1px 0 #dddddd,0 1px 0 #ffffff;font-family:Baske
 #quick-search .form-search label{display:none;}
 #main-menu a{background-color:#ffffff;margin-right:10px;}#main-menu a:hover{background-color:#eee;}
 #main-menu a.selected{background-color:#007aa0;color:#ffffff;}
-#main{background-color:#fff;border-bottom:#007aa0 2px solid;border-top:#007aa0 2px solid;box-shadow:inset 0 1px 0 #ffffff,0 1px 5px rgba(0, 0, 0, 0.1);padding:1em 20px;}
+#main{background-color:#fff;border-bottom:#007aa0 2px solid;border-top:#007aa0 2px solid;-moz-box-shadow:inset 0 1px 0 #ffffff,0 1px 5px rgba(0, 0, 0, 0.1);-webkit-box-shadow:inset 0 1px 0 #ffffff,0 1px 5px rgba(0, 0, 0, 0.1);box-shadow:inset 0 1px 0 #ffffff,0 1px 5px rgba(0, 0, 0, 0.1);padding:1em 20px;}
 #content .noleftmargin{margin-left:0;}
 #sidebar form input[type="checkbox"]{margin:0 0 5px 0;}
 #sidebar form label{display:inline-block;}
@@ -1058,7 +1058,7 @@ tr.group:hover a.toggle-all{text-decoration:none;}
 td.assigned_to{white-space:normal;}
 td.center{text-align:center;}
 td.username img.gravatar{margin:0 .5em 0 0;vertical-align:top;}
-h2 img{vertical-align:middle;}h2 img.gravatar{margin:-2px 4px -4px 0;}
+h2{border-bottom:#e56045 solid 3px;margin-bottom:15px;padding-bottom:5px;}h2 img{vertical-align:middle;}h2 img.gravatar{margin:-2px 4px -4px 0;}
 h3.comments{background:url(../img/icons/comment.png) no-repeat 0% 50%;padding-left:20px;}
 h3.version{background:url(../img/icons/package.png) no-repeat 0% 50%;padding-left:20px;}
 h3 img.gravatar{margin:-4px 4px -4px 0;}
