@@ -95,7 +95,20 @@ function ahCustomizeMain() {
 
     // There's a bug with the :first-child selector, so we add a class to remove left margin
     $content.find('.row-fluid').children('[class*="span"]').first().addClass('noleftmargin');
+}
 
+/**
+ * Customize footer
+ */
+function ahCustomizeFooter() {
+    // Add classes for responsive design
+    $('#footer .bgl').addClass('container-fluid');
+    $('#footer .bgr').addClass('row-fluid');
+
+    // Add link to a.h website
+    var footerContent = $('#footer .bgr').html();
+    footerContent += ' - Design by <a href="http://ameliehusson.com" title="Am&eacute;lie Husson">Am&eacute;lie Husson</a>';
+    $('#footer .bgr').html(footerContent);
 }
 
 /**
@@ -127,6 +140,7 @@ $(document).ready(function () {
     ahRebuildTopMenu();
     ahRebuildHeader();
     ahCustomizeMain();
+    ahCustomizeFooter();
     ahInjectClasses();
     ahCustomizeMisc()
 });
