@@ -3,6 +3,18 @@
 @import url('../bootstrap/less/bootstrap.less');
 @import url('../bootstrap/less/responsive.less');
 
+/***** Variables *****/
+
+/***** Mixins *****/
+.word-break(){
+    -ms-word-break  : break-all;
+    word-break      : break-all;
+    word-break      : break-word; // Non standard for webkit
+    -webkit-hyphens : auto;
+    -moz-hyphens    : auto;
+    hyphens         : auto;
+}
+
 /***** Common ****/
 
 body {
@@ -330,6 +342,7 @@ table {
             padding     : .3em;
             #gradient > .vertical(lighten(@ah_lbeige, 15%), lighten(@ah_lbeige, 10%));
             text-shadow : 0 -1px 0 @grayLighter, 0 1px 0 @white; // Letterpress effect
+            .word-break;
             &.week-number { width : auto; }
         }
         tbody tr { height : 100px; }
@@ -577,7 +590,9 @@ span.add_attachment {
     margin-top   : 5px;
     padding-left : 5px;
     font-size    : .9em;
+    form, label { display : inline-block; }
     input, select { font-size : .9em; }
+    a { margin-left : 5px; }
 }
 .message .contextual { margin-top : 0; }
 
@@ -1046,9 +1061,16 @@ img.ui-datepicker-trigger { }
 }
 .text-diff { }
 
-.block-receiver { }
-.mypage-box { }
-.handle { }
+.block-receiver {
+    border        : @ah_lblue dashed 1px;
+    margin-bottom : 2em;
+}
+.mypage-box {
+    margin-bottom : 2em;
+    color         : @grayDark;
+    line-height   : 1.5em;
+}
+.handle { cursor : move; }
 
 .gantt_hdr { }
 .gantt_subjects {

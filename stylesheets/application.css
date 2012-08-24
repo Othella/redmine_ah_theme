@@ -1015,7 +1015,7 @@ table.boards a.board{background:url(../img/icons/comment.png) no-repeat 0% 50%;p
 table.transitions td.enabled{background-color:#dff0d8;}
 table.fields_permissions td.readonly{background-color:#eeeeee;}
 table.fields_permissions td.required{background-color:#f2dede;}
-table.cal{border-collapse:collapse;width:100%;border:#f2ad9e solid 1px;margin:0 0 .5em 0;}table.cal thead th{width:14.285714285714286%;padding:.3em;background-color:#fefcfb;background-image:-moz-linear-gradient(top, #ffffff, #fcf8f4);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#fcf8f4));background-image:-webkit-linear-gradient(top, #ffffff, #fcf8f4);background-image:-o-linear-gradient(top, #ffffff, #fcf8f4);background-image:linear-gradient(to bottom, #ffffff, #fcf8f4);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fffcf8f4', GradientType=0);text-shadow:0 -1px 0 #eeeeee,0 1px 0 #ffffff;}table.cal thead th.week-number{width:auto;}
+table.cal{border-collapse:collapse;width:100%;border:#f2ad9e solid 1px;margin:0 0 .5em 0;}table.cal thead th{width:14.285714285714286%;padding:.3em;background-color:#fefcfb;background-image:-moz-linear-gradient(top, #ffffff, #fcf8f4);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#fcf8f4));background-image:-webkit-linear-gradient(top, #ffffff, #fcf8f4);background-image:-o-linear-gradient(top, #ffffff, #fcf8f4);background-image:linear-gradient(to bottom, #ffffff, #fcf8f4);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fffcf8f4', GradientType=0);text-shadow:0 -1px 0 #eeeeee,0 1px 0 #ffffff;-ms-word-break:break-all;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}table.cal thead th.week-number{width:auto;}
 table.cal tbody tr{height:100px;}
 table.cal td{border:#f2ad9e solid 1px;vertical-align:top;font-size:.9em;}table.cal td.week-number{background-color:#fcf8f4;border:none;font-size:1em;padding:.3em;vertical-align:middle;text-align:center;text-shadow:0 -1px 0 #eeeeee,0 1px 0 #ffffff;}
 table.cal td.odd{background-color:#eeeeee;}table.cal td.odd p.day-num{color:#999999;}
@@ -1074,7 +1074,9 @@ span.add_attachment a{padding-left:16px;background:url(../img/icons/bullet_add.p
 .highlight.token-1{background-color:#f2dede;}
 .highlight.token-2{background-color:#dff0d8;}
 .highlight.token-3{background-color:#d9edf7;}
-.contextual{float:right;white-space:nowrap;line-height:1.4em;margin-top:5px;padding-left:5px;font-size:.9em;}.contextual input,.contextual select{font-size:.9em;}
+.contextual{float:right;white-space:nowrap;line-height:1.4em;margin-top:5px;padding-left:5px;font-size:.9em;}.contextual form,.contextual label{display:inline-block;}
+.contextual input,.contextual select{font-size:.9em;}
+.contextual a{margin-left:5px;}
 .message .contextual{margin-top:0;}
 p.cal.legend .starting{background:url(../img/icons/bullet_go.png) no-repeat -1px -2px;padding-left:16px;}
 p.cal.legend .ending{background:url(../img/icons/bullet_end.png) no-repeat -1px -2px;padding-left:16px;}
@@ -1124,6 +1126,9 @@ span.required{color:#9d261d;}
 #errorExplanation{background:url(../img/icons/exclamation.png) 8px 50% no-repeat;color:#b94a48;background-color:#f2dede;border-color:#eed3d7;}
 .nodata,.warning{color:#c09853;background-color:#fcf8e3;border-color:#fbeed5;}
 #ajax-indicator{position:fixed;background-color:#eeeeee;border:1px solid #999999;top:35%;left:40%;width:20%;font-weight:bold;text-align:center;padding:0.6em;z-index:100;opacity:0.5;}#ajax-indicator span{background:transparent url("../img/icons/loading.gif") 0 40% no-repeat;padding-left:26px;vertical-align:bottom;}
+.block-receiver{border:#95a8a0 dashed 1px;margin-bottom:2em;}
+.mypage-box{margin-bottom:2em;color:#333333;line-height:1.5em;}
+.handle{cursor:move;}
 .task.parent.marker.starting,.task.parent.marker.ending{position:absolute;background:url(../img/icons/task_parent_end.png) no-repeat 0 0;width:8px;height:16px;margin-left:-4px;left:0px;top:-1px;}
 .task_late{background-color:#9d261d;background-image:url("../img/icons/task_late.png");border:1px solid #9d261d;}
 .task_done{background-color:#46a546;background-image:url("../img/icons/task_done.png");border:1px solid #46a546;}
