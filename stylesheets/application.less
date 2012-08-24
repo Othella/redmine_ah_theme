@@ -35,6 +35,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size   : inherit;
     padding     : 0;
     text-shadow : 0 1px 0 @navbarBackgroundHighlight;
+    .box-shadow(0 1px 5px rgba(0, 0, 0, .6));
+    border-top: 2px solid lighten(@navbarBackground, 5%);
+    border-bottom: 2px solid darken(@navbarBackground, 5%);
     a {
         color        : @navbarLinkColor;
         margin-right : 0;
@@ -77,6 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #quick-search {
+    margin: 1em auto;
     & > select, .form-search {
         float  : right;
         margin : 6px;
