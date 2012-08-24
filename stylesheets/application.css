@@ -1015,11 +1015,11 @@ table.boards a.board{background:url(../img/icons/comment.png) no-repeat 0% 50%;p
 table.transitions td.enabled{background-color:#dff0d8;}
 table.fields_permissions td.readonly{background-color:#eeeeee;}
 table.fields_permissions td.required{background-color:#f2dede;}
-table.cal{border-collapse:collapse;width:100%;border:#e56045 solid 1px;margin:0 0 .5em 0;}table.cal thead th{width:14.285714285714286%;padding:.3em;background-color:rgba(239, 223, 206, 0.5);}table.cal thead th.week-number{width:auto;}
+table.cal{border-collapse:collapse;width:100%;border:#f2ad9e solid 1px;margin:0 0 .5em 0;}table.cal thead th{width:14.285714285714286%;padding:.3em;background-color:#fefcfb;background-image:-moz-linear-gradient(top, #ffffff, #fcf8f4);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#fcf8f4));background-image:-webkit-linear-gradient(top, #ffffff, #fcf8f4);background-image:-o-linear-gradient(top, #ffffff, #fcf8f4);background-image:linear-gradient(to bottom, #ffffff, #fcf8f4);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fffcf8f4', GradientType=0);text-shadow:0 -1px 0 #eeeeee,0 1px 0 #ffffff;}table.cal thead th.week-number{width:auto;}
 table.cal tbody tr{height:100px;}
-table.cal td{border:rgba(229, 96, 69, 0.5) solid 1px;vertical-align:top;font-size:.9em;}table.cal td.week-number{background-color:rgba(239, 223, 206, 0.5);border:none;font-size:1em;padding:.3em;vertical-align:middle;}
+table.cal td{border:#f2ad9e solid 1px;vertical-align:top;font-size:.9em;}table.cal td.week-number{background-color:#fcf8f4;border:none;font-size:1em;padding:.3em;vertical-align:middle;text-align:center;text-shadow:0 -1px 0 #eeeeee,0 1px 0 #ffffff;}
 table.cal td.odd{background-color:#eeeeee;}table.cal td.odd p.day-num{color:#999999;}
-table.cal td.today{background-color:rgba(229, 96, 69, 0.1);}table.cal td.today p.day-num{font-weight:bold;}
+table.cal td.today{background-color:#fff3cf;background-image:-moz-linear-gradient(top, #fff6d9, #fff0c0);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#fff6d9), to(#fff0c0));background-image:-webkit-linear-gradient(top, #fff6d9, #fff0c0);background-image:-o-linear-gradient(top, #fff6d9, #fff0c0);background-image:linear-gradient(to bottom, #fff6d9, #fff0c0);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffff6d9', endColorstr='#fffff0c0', GradientType=0);}table.cal td.today p.day-num{font-weight:bold;text-shadow:0 -1px 0 #eeeeee,0 1px 0 #ffffff;}
 table.cal td p.day-num{text-align:right;font-size:1.1em;margin:.2em;}
 table.cal .starting a{background:url(../img/icons/bullet_go.png) no-repeat -1px -2px;padding-left:16px;}
 table.cal .ending a{background:url(../img/icons/bullet_end.png) no-repeat -1px -2px;padding-left:16px;}

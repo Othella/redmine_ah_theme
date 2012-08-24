@@ -323,33 +323,39 @@ table {
     &.cal {
         border-collapse : collapse;
         width           : 100%;
-        border          : @ah_orange solid 1px;
+        border          : lighten(@ah_orange, 20%) solid 1px;
         margin          : 0 0 .5em 0;
         thead th {
-            width            : 100% / 7;
-            padding          : .3em;
-            background-color : fade(@ah_lbeige, 50%);
+            width       : 100% / 7;
+            padding     : .3em;
+            #gradient > .vertical(lighten(@ah_lbeige, 15%), lighten(@ah_lbeige, 10%));
+            text-shadow : 0 -1px 0 @grayLighter, 0 1px 0 @white; // Letterpress effect
             &.week-number { width : auto; }
         }
         tbody tr { height : 100px; }
         td {
-            border         : fade(@ah_orange, 50%) solid 1px;
+            border         : lighten(@ah_orange, 20%) solid 1px;
             vertical-align : top;
             font-size      : .9em;
             &.week-number {
-                background-color : fade(@ah_lbeige, 50%);
+                background-color : lighten(@ah_lbeige, 10%);
                 border           : none;
                 font-size        : 1em;
                 padding          : .3em;
                 vertical-align   : middle;
+                text-align       : center;
+                text-shadow      : 0 -1px 0 @grayLighter, 0 1px 0 @white; // Letterpress effect
             }
             &.odd {
                 background-color : @grayLighter;
                 p.day-num { color : @grayLight; }
             }
             &.today {
-                background-color : fade(@ah_orange, 10%);
-                p.day-num { font-weight : bold; }
+                #gradient > .vertical(lighten(@yellow, 40%), lighten(@yellow, 35%));
+                p.day-num {
+                    font-weight : bold;
+                    text-shadow : 0 -1px 0 @grayLighter, 0 1px 0 @white; // Letterpress effect
+                }
             }
             p.day-num {
                 text-align : right;
