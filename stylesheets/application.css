@@ -1015,6 +1015,12 @@ table.boards a.board{background:url(../img/icons/comment.png) no-repeat 0% 50%;p
 table.transitions td.enabled{background-color:#dff0d8;}
 table.fields_permissions td.readonly{background-color:#eeeeee;}
 table.fields_permissions td.required{background-color:#f2dede;}
+table.cal{border-collapse:collapse;width:100%;border:#e56045 solid 1px;margin:0 0 .5em 0;}table.cal thead th{width:14.285714285714286%;padding:.3em;background-color:rgba(239, 223, 206, 0.5);}table.cal thead th.week-number{width:auto;}
+table.cal tbody tr{height:100px;}
+table.cal td{border:rgba(229, 96, 69, 0.5) solid 1px;vertical-align:top;font-size:.9em;}table.cal td.week-number{background-color:rgba(239, 223, 206, 0.5);border:none;font-size:1em;padding:.3em;vertical-align:middle;}
+table.cal td.odd{background-color:#eeeeee;}table.cal td.odd p.day-num{color:#999999;}
+table.cal td.today{background-color:rgba(229, 96, 69, 0.1);}table.cal td.today p.day-num{font-weight:bold;}
+table.cal td p.day-num{text-align:right;font-size:1.1em;margin:.2em;}
 table.cal .starting a{background:url(../img/icons/bullet_go.png) no-repeat -1px -2px;padding-left:16px;}
 table.cal .ending a{background:url(../img/icons/bullet_end.png) no-repeat -1px -2px;padding-left:16px;}
 table.cal .starting.ending a{background:url(../img/icons/bullet_diamond.png) no-repeat -1px -2px;padding-left:16px;}
@@ -1073,6 +1079,7 @@ span.add_attachment a{padding-left:16px;background:url(../img/icons/bullet_add.p
 p.cal.legend .starting{background:url(../img/icons/bullet_go.png) no-repeat -1px -2px;padding-left:16px;}
 p.cal.legend .ending{background:url(../img/icons/bullet_end.png) no-repeat -1px -2px;padding-left:16px;}
 p.cal.legend .starting.ending{background:url(../img/icons/bullet_diamond.png) no-repeat -1px -2px;padding-left:16px;}
+p.cal.legend span{display:block;}
 dt.issue{background-image:url(../img/icons/ticket.png);}
 dt.issue-edit{background-image:url(../img/icons/ticket_edit.png);}
 dt.issue-closed{background-image:url(../img/icons/ticket_checked.png);}

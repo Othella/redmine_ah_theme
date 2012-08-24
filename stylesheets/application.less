@@ -131,8 +131,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #footer {
     text-align : center;
-    margin: 1em auto;
-    font-size: .9em;
+    margin     : 1em auto;
+    font-size  : .9em;
 }
 
 /***** Bootstrap cutsomization ****/
@@ -321,19 +321,41 @@ table {
         }
     }
     &.cal {
+        border-collapse : collapse;
+        width           : 100%;
+        border          : @ah_orange solid 1px;
+        margin          : 0 0 .5em 0;
         thead th {
-            &.week-number { }
+            width            : 100% / 7;
+            padding          : .3em;
+            background-color : fade(@ah_lbeige, 50%);
+            &.week-number { width : auto; }
         }
-        tbody tr { }
+        tbody tr { height : 100px; }
         td {
-            &.week-number { }
+            border         : fade(@ah_orange, 50%) solid 1px;
+            vertical-align : top;
+            font-size      : .9em;
+            &.week-number {
+                background-color : fade(@ah_lbeige, 50%);
+                border           : none;
+                font-size        : 1em;
+                padding          : .3em;
+                vertical-align   : middle;
+            }
             &.odd {
-                p.day-num { }
+                background-color : @grayLighter;
+                p.day-num { color : @grayLight; }
             }
             &.today {
-                p.day-num { }
+                background-color : fade(@ah_orange, 10%);
+                p.day-num { font-weight : bold; }
             }
-            p.day-num { }
+            p.day-num {
+                text-align : right;
+                font-size  : 1.1em;
+                margin     : .2em;
+            }
         }
         .starting a {
             background   : url(../img/icons/bullet_go.png) no-repeat -1px -2px;
@@ -583,7 +605,7 @@ p {
             background   : url(../img/icons/bullet_diamond.png) no-repeat -1px -2px;
             padding-left : 16px;
         }
-        span { }
+        span { display : block; }
     }
     &.pourcent { }
     &.progress-info { }
