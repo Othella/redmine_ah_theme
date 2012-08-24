@@ -657,8 +657,20 @@ p {
 }
 #related-issues li img { }
 
-.toggle-multiselect { }
-.buttons { }
+.toggle-multiselect {
+    background   : transparent url("../img/icons/bullet_toggle_plus.png") 0 40% no-repeat;
+    padding-left : 8px;
+    margin-left  : 0;
+    cursor       : pointer;
+}
+.buttons {
+    font-size : .9em;
+    margin    : 2em auto;
+    .btn { margin-right : 1em;
+        a { padding-top : 5px; }
+        &:hover { text-decoration : none; }
+    }
+}
 
 .journal {
     ul.details img { }
@@ -947,8 +959,11 @@ form {
 }
 fieldset {
     &.collapsible {
-        &.collapsed legend { }
-        legend { }
+        &.collapsed legend { background-image : url("../img/icons/bullet_toggle_plus.png"); }
+        legend {
+            background : transparent url("../img/icons/bullet_toggle_minus.png") right 40% no-repeat;
+            cursor     : pointer;
+        }
     }
     &.settings {
         label { }
@@ -959,20 +974,34 @@ fieldset {
     &#date-range p { }
     &#filters {
         table {
-            td { }
+            border-collapse : collapse;
+            td {
+                vertical-align : middle;
+                padding        : 1em 0;
+                td { padding : 0 1em 0 0; }
+            }
         }
         tr {
-            &.filter { }
+            &.filter { height : 40px; }
         }
         td {
-            &.field { }
+            input, label { display : inline; }
+            &.field {
+                input[type="checkbox"] { margin : -3px 5px 0 0; }
+            }
             &.operator { }
             &.values {
+                white-space : nowrap;
                 select { }
                 input { }
             }
-            &.add-filter { }
+            &.add-filter {
+                text-align     : right;
+                vertical-align : top;
+                label { margin-right : 1em; }
+            }
         }
+        select { width : auto; }
     }
 }
 input {
@@ -988,6 +1017,7 @@ input {
             background-image : url("../img/icons/loading.gif");
         }
     }
+    &.hasDatepicker { width : 90px; /* same as .input-small */ }
 }
 select {
     &#issue_done_ratio { }
@@ -1043,7 +1073,7 @@ span.required { color : @red; }
     span { }
     img { }
 }
-.other-formats span + span:before { content : " |"; }
+.other-formats span + span:before { content : " | "; }
 
 #errorExplanation {
     background       : url(../img/icons/exclamation.png) 8px 50% no-repeat;
@@ -1058,6 +1088,8 @@ span.required { color : @red; }
     color            : @warningText;
     background-color : @warningBackground;
     border-color     : @warningBorder;
+    padding          : 1em;
+    margin           : 1em auto;
 }
 .conflict-details { }
 
@@ -1085,7 +1117,11 @@ span.required { color : @red; }
     span.tip { }
 }
 
-img.ui-datepicker-trigger { }
+img.ui-datepicker-trigger {
+    cursor         : pointer;
+    vertical-align : middle;
+    margin-left    : 4px;
+}
 
 #roadmap table.progress td { }
 

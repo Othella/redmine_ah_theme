@@ -121,7 +121,8 @@ function ahInjectClasses() {
     $('.box').addClass('well');
 
     // Use btn class for submit inputs
-    $('input[type="submit"]').addClass('btn');
+    $('input[type="submit"], input[type="button"]').addClass('btn');
+    $('.buttons a').wrap('<span class="btn"></span>');
 
     // Reduce input size in contextual
     $('.contextual input, .contextual select').addClass('input-medium');
