@@ -999,6 +999,9 @@ h1,h2,h3,h4,h5,h6{text-shadow:0 -1px 0 #dddddd,0 1px 0 #ffffff;font-family:Baske
 #admin-menu a.plugins{background-image:url(../img/icons/plugin.png);}
 #admin-menu a.info{background-image:url(../img/icons/help.png);}
 #admin-menu a.server_authentication{background-image:url(../img/icons/server_key.png);}
+#login-form table{margin:1em auto;}#login-form table tr td:first-child{padding-right:1em;}
+#login-form table tr:last-of-type>td{padding-top:1em;}
+#login-form table input#autologin{margin:0 5px 0 0;}
 a img{border:none;}
 a.issue.closed,a.issue.closed:link,a.issue.closed:visited,a#toggle-completed-versions{color:#999999;text-decoration:line-through;}
 a.project.closed,a.project.closed:link,a.project.closed:visited{color:#999999;}
@@ -1102,9 +1105,9 @@ div.wiki .noborder{border:0;}div.wiki .noborder td,div.wiki .noborder th{border:
 div.wiki .external{background:transparent url("../img/icons/external.png") 0 60% no-repeat;padding-left:12px;}
 div.wiki a.new{color:#9d261d;}
 div.wiki-page .contextual a{opacity:.4;}div.wiki-page .contextual a:hover{opacity:1;}
-div.flash.error{background:url(../img/icons/exclamation.png) 8px 50% no-repeat;color:#b94a48;background-color:#f2dede;border-color:#eed3d7;}
-div.flash.notice{background:url(../img/icons/true.png) 8px 5px no-repeat;color:#468847;background-color:#dff0d8;border-color:#d6e9c6;}
-div.flash.warning{background:url(../img/icons/warning.png) 8px 5px no-repeat;color:#c09853;background-color:#fcf8e3;border-color:#fbeed5;}
+div.flash{padding:1em 1em 1em 40px;}div.flash.error{background:url(../img/icons/exclamation.png) 15px 50% no-repeat;color:#b94a48;background-color:#f2dede;border-color:#eed3d7;}
+div.flash.notice{background:url(../img/icons/true.png) 15px 50% no-repeat;color:#468847;background-color:#dff0d8;border-color:#d6e9c6;}
+div.flash.warning{background:url(../img/icons/warning.png) 15px 50% no-repeat;color:#c09853;background-color:#fcf8e3;border-color:#fbeed5;}
 div#search-results{margin-left:1em;}div#search-results dd{margin-bottom:1em;padding-left:18px;font-size:.9em;}div#search-results dd .description{font-style:italic;}
 div#search-results dt{background-position:0 50%;background-repeat:no-repeat;padding-left:20px;line-height:1.5;}div#search-results dt.issue.closed{background-image:url(../img/icons/ticket_checked.png);}
 div#search-results span.project:after{content:" -";}
@@ -1140,6 +1143,7 @@ fieldset#filters select{width:auto;}
 input#openid_url{background:#ffffff url('../img/icons/openid-bg.gif') 0 50% no-repeat;}
 input#principal_search,input#user_search{background:url(../img/icons/magnifier.png) no-repeat 2px 50%;padding-left:20px;}input#principal_search.ajax-loading,input#user_search.ajax-loading{background-image:url("../img/icons/loading.gif");}
 input.hasDatepicker{width:90px;}
+select{width:auto;}
 #preview fieldset{margin-top:1em;background:url(../img/icons/draft.png);}
 span.required{color:#9d261d;}
 .summary{font-style:italic;}

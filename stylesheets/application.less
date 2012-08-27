@@ -187,9 +187,12 @@ h1, h2, h3, h4, h5, h6 {
 
 #login-form {
     table {
-        td { }
-        label { }
-        input#username, input#password { }
+        margin : 1em auto;
+        tr {
+            td:first-child { padding-right : 1em; }
+            &:last-of-type > td { padding-top : 1em; }
+        }
+        input#autologin { margin : 0 5px 0 0; }
     }
 }
 
@@ -766,20 +769,21 @@ div {
         img { }
     }
     &.flash {
+        padding: 1em 1em 1em 40px;
         &.error {
-            background       : url(../img/icons/exclamation.png) 8px 50% no-repeat;
+            background       : url(../img/icons/exclamation.png) 15px 50% no-repeat;
             color            : @errorText;
             background-color : @errorBackground;
             border-color     : @errorBorder;
         }
         &.notice {
-            background       : url(../img/icons/true.png) 8px 5px no-repeat;
+            background       : url(../img/icons/true.png) 15px 50% no-repeat;
             color            : @successText;
             background-color : @successBackground;
             border-color     : @successBorder;
         }
         &.warning {
-            background       : url(../img/icons/warning.png) 8px 5px no-repeat;
+            background       : url(../img/icons/warning.png) 15px 50% no-repeat;
             color            : @warningText;
             background-color : @warningBackground;
             border-color     : @warningBorder;
@@ -1020,6 +1024,7 @@ input {
     &.hasDatepicker { width : 90px; /* same as .input-small */ }
 }
 select {
+    width : auto;
     &#issue_done_ratio { }
 }
 textarea {
