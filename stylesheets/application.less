@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
             position     : absolute;
             margin       : 0;
             bottom       : 0;
-            width        : 80%;
+            width        : 88%;
             padding-left : .5em;
             height       : 2.6em;
             li {
@@ -274,6 +274,8 @@ a {
 
 em {
     &.info {
+        color     : @gray;
+        font-size : .9em;
         &.error {
             padding-left : 20px; background : url(../img/icons/exclamation.png) no-repeat 0 50%;
         }
@@ -371,7 +373,11 @@ table {
         }
     }
     &.query-columns {
-        td.buttons { }
+        text-align : center;
+        br { display : none; }
+        td.buttons {
+            input[type="button"] { margin-left : 1em; }
+        }
     }
     &.transitions {
         td.enabled { background-color : @successBackground; }
@@ -908,7 +914,10 @@ div {
         td.total-hours { }
     }
     &.tab-content {
-        fieldset > legend { border : none; }
+        fieldset > legend {
+            margin-bottom : 0;
+            border        : none;
+        }
     }
     &#tab-content-members {
         .splitcontentleft { }
@@ -1017,7 +1026,9 @@ fieldset {
         label { }
     }
     &#notified_events {
-        .parent { }
+        br { display : none; }
+        .parent { padding-left : 2em; }
+        p { margin : 1em auto; }
     }
     &#date-range p { }
     &#filters {
@@ -1076,7 +1087,7 @@ select {
 }
 textarea {
     &.wiki-edit {
-        width  : 99%;
+        width  : 98%;
         resize : vertical; }
     &.text_cf { }
     &#custom_field_possible_values { }
@@ -1105,10 +1116,11 @@ textarea {
             text-align  : left;
         }
         &.block {
-            text-align : left;
-            float      : none;
-            display    : block;
-            width      : auto;
+            text-align  : left;
+            float       : none;
+            display     : block;
+            width       : auto;
+            margin-left : 0;
         }
         &.inline {
             float       : none;
