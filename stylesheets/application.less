@@ -467,11 +467,16 @@ table {
         }
     }
     &.progress {
-        margin : 0;
+        margin          : 5px auto;
+        border-spacing  : 0;
+        empty-cells     : show;
+        text-align      : center;
+        border-collapse : collapse;
         td {
-            &.closed { }
-            &.done { }
-            &.todo { }
+            &.bar { height : 20px; }
+            &.closed { background-color : @successText !important; }
+            &.done { background-color : @successBorder !important; }
+            &.todo { background-color : @successBackground !important; }
         }
     }
     td { }
@@ -710,7 +715,7 @@ p {
         }
         span { display : block; }
     }
-    &.pourcent { }
+    &.pourcent { margin : 0; }
     &.progress-info { }
 }
 

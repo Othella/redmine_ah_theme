@@ -141,6 +141,10 @@ function ahInjectClasses() {
     // Use red button for delete account link
     $('.action-account .icon-del').wrap('<span class="btn btn-danger"></span>');
 
+    // Use progress bar classes
+    $('.progress').addClass('progress-success').addClass('progress-striped');
+    $('.progress .todo, .progress .done, .progress .closed').addClass('bar');
+
 }
 
 /**
