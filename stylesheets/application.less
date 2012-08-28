@@ -43,14 +43,15 @@ h1, h2, h3, h4, h5, h6 {
         margin-right : 0;
         &:hover { color : @navbarLinkColorHover; }
         &.brand {
-            float : right;
-            color : @navbarBrandColor;
+            float   : right;
+            color   : @navbarBrandColor;
+            padding : 5px 20px;
         }
     }
     #account, #loggedas { float : right; }
     #loggedas {
         color   : @navbarText;
-        padding : 10px 15px 10px;
+        padding : 5px 15px 5px;
     }
     ul {
         list-style : none outside none;
@@ -62,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
         &.nav {
             margin : 0 10px 0 0;
             li a {
-                padding-left        : 36px;
+                padding             : 5px 10px 5px 36px;
                 background-position : 10px 50%;
                 background-repeat   : no-repeat;
                 &.home { background-image : url("../img/top-menu-icons/home.png"); }
@@ -1636,7 +1637,7 @@ tr.context-menu-selection td { background-color : @ah_blue !important; }
 }
 
 @media (min-width: 980px) {
-    #header { margin-top : 44px; /* same as top-menu */ }
+    #header { margin-top : 34px; /* same as top-menu */ }
 }
 
 @media print {
