@@ -129,6 +129,12 @@ function ahInjectClasses() {
     // Reduce input size in contextual
     $('.contextual input, .contextual select').addClass('input-medium');
 
+    // Set form inline
+    $('.action-projects #content form').addClass('form-horizontal');
+
+    // Use table classes
+    $('table.list').addClass('table table-striped table-bordered');
+
 }
 
 /**
@@ -149,7 +155,7 @@ $(document).ready(function () {
     ahCustomizeMain();
     ahCustomizeFooter();
     ahInjectClasses();
-    ahCustomizeMisc()
+    ahCustomizeMisc();
 });
 
 

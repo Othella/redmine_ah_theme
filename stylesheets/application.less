@@ -299,8 +299,9 @@ table {
         .hours-dec { }
     }
     &.list {
-        th { }
+        th { text-align : center; }
         td {
+            vertical-align : middle;
             &.id { }
             &.checkbox {
                 input { }
@@ -1312,6 +1313,14 @@ img.ui-datepicker-trigger {
 .version-overdue a,
 .issue-overdue a,
 .project-overdue a { color : @red; }
+
+.action-projects #content form {
+    label {
+        padding-top : 1em;
+        display     : inline-block;
+    }
+    select#status { margin-right : 2em; }
+}
 
 .icon {
     background-position : 0% 50%;
