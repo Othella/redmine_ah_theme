@@ -700,7 +700,11 @@ p {
     &.subtitle { }
     &.footnote { }
     &.pagination { }
-    &.other-formats { }
+    &.other-formats {
+        text-align : right;
+        font-size  : .9em;
+        color      : @gray;
+    }
     &.cal.legend {
         .starting {
             background   : url(../img/icons/bullet_go.png) no-repeat -1px -2px;
@@ -1080,6 +1084,7 @@ fieldset {
             margin-bottom : 1em;
             & + div {
                 margin-top : 1em;
+                display    : inline-block;
             }
         }
     }
@@ -1221,6 +1226,7 @@ span.required { color : @red; }
 .other-formats span + span:before { content : " | "; }
 
 #errorExplanation {
+    padding          : 1em 1em 1em 40px;
     background       : url(../img/icons/exclamation.png) 8px 50% no-repeat;
     color            : @errorText;
     background-color : @errorBackground;

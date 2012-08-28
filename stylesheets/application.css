@@ -1097,6 +1097,7 @@ span.add_attachment a{padding-left:16px;background:url(../img/icons/bullet_add.p
 .contextual input,.contextual select{font-size:.9em;}
 .contextual a{margin-left:5px;}
 .message .contextual{margin-top:0;}
+p.other-formats{text-align:right;font-size:.9em;color:#555555;}
 p.cal.legend .starting{background:url(../img/icons/bullet_go.png) no-repeat -1px -2px;padding-left:16px;}
 p.cal.legend .ending{background:url(../img/icons/bullet_end.png) no-repeat -1px -2px;padding-left:16px;}
 p.cal.legend .starting.ending{background:url(../img/icons/bullet_diamond.png) no-repeat -1px -2px;padding-left:16px;}
