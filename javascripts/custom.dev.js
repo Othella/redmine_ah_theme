@@ -1,4 +1,12 @@
 /**
+ * This file contains all scripts used to customize the layout
+ * Remark: It can't use Bootstrap since it's loaded before!
+ * Author: Amélie Husson
+ * Author URI: http://ameliehusson.com
+ */
+
+
+/**
  * Add classes to use bootstrap fluid layout
  */
 function ahSetFluidLayout() {
