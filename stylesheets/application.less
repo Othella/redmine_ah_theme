@@ -778,21 +778,46 @@ div {
         p.buttons { }
     }
     &.issue {
+        border  : 1px solid @ah_beige;
+        #gradient > .vertical (lighten(@ah_lbeige, 11%),lighten(@ah_lbeige, 10%));
+        padding : 10px;
+        .border-radius(4px);
         div.subject {
             div div { }
             p { }
             & > div > p { }
+            h3 { margin : 0; }
         }
+        p.author { font-size : .9em; }
         span.private { }
-        .next-prev-links { }
+        .next-prev-links {
+            font-size : .9em;
+            color     : @grayLight;
+        }
         table {
             img.gravatar { }
             &.attributes {
-                th { }
-                td { }
+                text-align : left;
+                width      : 100%;
+                th { width : 22%; }
+                td { width : 28%; }
+                td.progress, th.progress {
+                    background : transparent;
+                    border     : none;
+                    .box-shadow(none);
+                    table.progress {
+                        float  : left;
+                        margin : 0 10px 0 0;
+                    }
+                }
             }
         }
-        img.gravatar { }
+        img.gravatar {
+            float   : left;
+            padding : 5px;
+            margin  : 0 10px 0 0;
+        }
+        .contextual { margin-top : 0; }
     }
     &.wiki {
         table { }

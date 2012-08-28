@@ -1118,6 +1118,15 @@ dt.attachment{background-image:url(../img/icons/attachment.png);}
 dt.document{background-image:url(../img/icons/document.png);}
 dt.project{background-image:url(../img/icons/projects.png);}
 dt.time-entry{background-image:url(../img/icons/time.png);}
+div.issue{border:1px solid #cfcab4;background-color:#fcfaf7;background-image:-moz-linear-gradient(top, #fdfbf8, #fcf8f4);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#fdfbf8), to(#fcf8f4));background-image:-webkit-linear-gradient(top, #fdfbf8, #fcf8f4);background-image:-o-linear-gradient(top, #fdfbf8, #fcf8f4);background-image:linear-gradient(to bottom, #fdfbf8, #fcf8f4);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffdfbf8', endColorstr='#fffcf8f4', GradientType=0);padding:10px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+div.issue div.subject h3{margin:0;}
+div.issue p.author{font-size:.9em;}
+div.issue .next-prev-links{font-size:.9em;color:#999999;}
+div.issue table.attributes{text-align:left;width:100%;}div.issue table.attributes th{width:22%;}
+div.issue table.attributes td{width:28%;}
+div.issue table.attributes td.progress,div.issue table.attributes th.progress{background:transparent;border:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}div.issue table.attributes td.progress table.progress,div.issue table.attributes th.progress table.progress{float:left;margin:0 10px 0 0;}
+div.issue img.gravatar{float:left;padding:5px;margin:0 10px 0 0;}
+div.issue .contextual{margin-top:0;}
 div.wiki .noborder{border:0;}div.wiki .noborder td,div.wiki .noborder th{border:0;}
 div.wiki .external{background:transparent url("../img/icons/external.png") 0 60% no-repeat;padding-left:12px;}
 div.wiki a.new{color:#9d261d;}

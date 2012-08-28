@@ -142,8 +142,8 @@ function ahInjectClasses() {
     $('.action-account .icon-del').wrap('<span class="btn btn-danger"></span>');
 
     // Use progress bar classes
-    $('.progress').addClass('progress-success').addClass('progress-striped');
-    $('.progress .todo, .progress .done, .progress .closed').addClass('bar');
+    $('table.progress').addClass('progress-success').addClass('progress-striped');
+    $('table.progress .todo, table.progress .done, table.progress .closed').addClass('bar');
 
 }
 
