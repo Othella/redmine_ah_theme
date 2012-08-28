@@ -122,6 +122,7 @@ function ahInjectClasses() {
 
     // Use btn class for submit inputs
     $('input[type="submit"], input[type="button"]').addClass('btn');
+    $('input[type="submit"]').addClass('btn-primary');
     $('.buttons a').wrap('<span class="btn"></span>');
     $('.tabs-buttons button').addClass('btn');
     $('.tab-content .btn').addClass('btn-primary');
@@ -135,7 +136,10 @@ function ahInjectClasses() {
 
     // Use table classes
     $('table.list').addClass('table table-condensed table-striped table-bordered');
-    $('table.list .btn').addClass('btn-small');
+    $('table.list .btn').addClass('btn-small'); // Small buttons
+
+    // Use red button for delete account link
+    $('.action-account .icon-del').wrap('<span class="btn btn-danger"></span>');
 
 }
 

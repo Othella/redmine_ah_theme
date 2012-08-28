@@ -81,9 +81,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #header {
     h1 {
-        background  : transparent url('../img/logo_small.png') 10px -10px no-repeat;
+        background  : transparent url('../img/logo_small.png') 10px -20px no-repeat;
         text-shadow : 0 -1px 0 @grayLight, 0 1px 0 @white /* Letterpress effect */;
-        padding     : 20px 10px 20px 150px;
+        padding     : 10px 10px 10px 150px;
     }
 }
 
@@ -111,6 +111,7 @@ h1, h2, h3, h4, h5, h6 {
             color            : @white;
         }
     }
+    .nav { margin-bottom : 10px; }
 }
 
 /***** Main ****/
@@ -122,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
     -moz-box-shadow    : inset 0 1px 0 #fff, 0 1px 5px rgba(0, 0, 0, .1);
     -webkit-box-shadow : inset 0 1px 0 #fff, 0 1px 5px rgba(0, 0, 0, .1);
     box-shadow         : inset 0 1px 0 #fff, 0 1px 5px rgba(0, 0, 0, .1);
-    padding            : 1em 20px;
+    padding            : 10px 20px;
 }
 
 #content {
@@ -181,6 +182,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #sidebar {
+    h3 {
+        border-bottom  : 1px solid @ah_orange;
+        padding-bottom : 6px;
+    }
+    h4 { margin-top : 1.6em; }
     hr { }
     .contextual { }
     form {
@@ -313,7 +319,10 @@ table {
             vertical-align : middle;
             &.id { }
             &.checkbox {
-                input { }
+                text-align : center;
+                input {
+                    margin : 0;
+                }
             }
             &.buttons {
                 a { }
@@ -386,7 +395,8 @@ table {
         text-align : center;
         br { display : none; }
         td.buttons {
-            input[type="button"] { margin-left : 1em; }
+            width : 60px;
+            input[type="button"] { margin : 5px 10px; }
         }
     }
     &.transitions {
@@ -457,6 +467,7 @@ table {
         }
     }
     &.progress {
+        margin : 0;
         td {
             &.closed { }
             &.done { }
@@ -604,7 +615,7 @@ td {
 .even { }
 
 h2 {
-    border-bottom  : @ah_orange solid 3px;
+    border-bottom  : @ah_orange double 3px;
     margin-bottom  : 15px;
     padding-bottom : 5px;
     img {
@@ -839,6 +850,9 @@ div {
             color            : @successText;
             background-color : @successBackground;
             border-color     : @successBorder;
+            a { color : @ah_orange;
+                &:hover { color : @ah_blue; }
+            }
         }
         &.warning {
             background       : url(../img/icons/warning.png) 15px 50% no-repeat;
@@ -1030,8 +1044,12 @@ fieldset {
     &.collapsible {
         &.collapsed legend { background-image : url("../img/icons/bullet_toggle_plus.png"); }
         legend {
-            background : transparent url("../img/icons/bullet_toggle_minus.png") right 40% no-repeat;
-            cursor     : pointer;
+            background    : transparent url("../img/icons/bullet_toggle_minus.png") right 40% no-repeat;
+            cursor        : pointer;
+            margin-bottom : 1em;
+            & + div {
+                margin-top : 1em;
+            }
         }
     }
     &.settings {
@@ -1046,9 +1064,7 @@ fieldset {
     &#filters {
         table {
             border-collapse : collapse;
-            td {
-                vertical-align : middle;
-                padding        : 1em 0;
+            td { vertical-align : middle;
                 td { padding : 0 1em 0 0; }
             }
         }
@@ -1334,6 +1350,14 @@ img.ui-datepicker-trigger {
     select#status, select#group_id { margin-right : 2em; }
 }
 
+span.btn-danger a {
+    color : @white;
+    &:hover {
+        text-decoration : none;
+        color           : @white;
+    }
+}
+
 .icon {
     background-position : 0% 50%;
     background-repeat   : no-repeat;
@@ -1411,6 +1435,7 @@ img.gravatar {
 }
 
 .hascontextmenu { cursor : context-menu; }
+tr.context-menu-selection td { background-color : @ah_blue !important; }
 
 .syntaxhl {
     div { display : inline; }
@@ -1606,7 +1631,7 @@ img.gravatar {
 }
 
 @media (min-width: 980px) {
-    #header { margin-top : 40px; /* same as top-menu */ }
+    #header { margin-top : 44px; /* same as top-menu */ }
 }
 
 @media print {
