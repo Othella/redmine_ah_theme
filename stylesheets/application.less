@@ -52,19 +52,27 @@ h1, h2, h3, h4, h5, h6 {
         color   : @navbarText;
         padding : 10px 15px 10px;
     }
-    ul.nav {
-        margin : 0 10px 0 0;
-        li a {
-            padding-left        : 36px;
-            background-position : 10px 50%;
-            background-repeat   : no-repeat;
-            &.home { background-image : url("../img/top-menu-icons/home.png"); }
-            &.my-page { background-image : url("../img/top-menu-icons/page.png"); }
-            &.projects { background-image : url("../img/top-menu-icons/wallet.png"); }
-            &.administration { background-image : url("../img/top-menu-icons/admin.png"); }
-            &.help { background-image : url("../img/top-menu-icons/help.png"); }
-            &.logout { background-image : url("../img/top-menu-icons/eject.png"); }
-            &.my-account { background-image : url("../img/top-menu-icons/account.png"); }
+    ul {
+        list-style : none outside none;
+        display    : block;
+        float      : left;
+        left       : 0px;
+        position   : relative;
+        & > li { float : left; }
+        &.nav {
+            margin : 0 10px 0 0;
+            li a {
+                padding-left        : 36px;
+                background-position : 10px 50%;
+                background-repeat   : no-repeat;
+                &.home { background-image : url("../img/top-menu-icons/home.png"); }
+                &.my-page { background-image : url("../img/top-menu-icons/page.png"); }
+                &.projects { background-image : url("../img/top-menu-icons/wallet.png"); }
+                &.administration { background-image : url("../img/top-menu-icons/admin.png"); }
+                &.help { background-image : url("../img/top-menu-icons/help.png"); }
+                &.logout { background-image : url("../img/top-menu-icons/eject.png"); }
+                &.my-account { background-image : url("../img/top-menu-icons/account.png"); }
+            }
         }
     }
 }
@@ -74,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 #header {
     h1 {
         background  : transparent url('../img/logo_small.png') 10px -10px no-repeat;
-        text-shadow : 0 -1px 0 darken(@ah_lblue, 15%), 0 1px 0 lighten(@ah_lblue, 15%) /* Letterpress effect */;
+        text-shadow : 0 -1px 0 @grayLight, 0 1px 0 @white /* Letterpress effect */;
         padding     : 20px 10px 20px 150px;
     }
 }
@@ -120,15 +128,52 @@ h1, h2, h3, h4, h5, h6 {
 #content {
     .noleftmargin { margin-left : 0; }
     .tabs {
+        position : relative;
+        overflow : hidden;
+        height   : 2.6em;
         ul {
+            position     : absolute;
+            margin       : 0;
+            bottom       : 0;
+            width        : 80%;
+            padding-left : .5em;
+            height       : 2.6em;
             li {
+                position        : relative;
+                float           : left;
+                list-style-type : none;
+                margin-right    : 1em;
+                white-space     : nowrap;
+                background      : @white;
                 a {
-                    &:hover { }
+                    display             : block;
+                    border              : @ah_orange solid 1px;
+                    border-bottom-color : @white;
+                    .border-radius(3px 3px 0 0);
+                    font-weight         : bold;
+                    text-decoration     : none;
+                    padding             : .5em 1em;
+                    &:hover {
+                        text-decoration : none;
+                    }
                     &.selected {
-                        &:hover { }
+                        #gradient > .vertical(lighten(@ah_orange, 10%), @ah_orange);
+                        text-shadow         : 0 -1px 0 darken(@ah_orange, 10%), 0 1px 0 fade(@white, 50%) /* Letterpress effect */;
+                        border-bottom-color : @ah_orange;
+                        color               : @white;
+                        &:hover {
+                            text-shadow : none;
+                        }
                     }
                 }
             }
+        }
+        div.tabs-buttons {
+            position : absolute;
+            right    : 0;
+            bottom   : 0;
+            width    : 65px;
+            height   : 34px;
         }
     }
 }
@@ -137,9 +182,6 @@ h1, h2, h3, h4, h5, h6 {
     hr { }
     .contextual { }
     form {
-        input[type="checkbox"] {
-            margin : 0 0 5px 0;
-        }
         label {
             display : inline-block;
         }
@@ -156,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /***** Bootstrap cutsomization ****/
 .well {
-    border : @ah_orange;
+    border-color : @ah_orange;
     h3 { margin-top : 0; }
 }
 
@@ -192,7 +234,6 @@ h1, h2, h3, h4, h5, h6 {
             td:first-child { padding-right : 1em; }
             &:last-of-type > td { padding-top : 1em; }
         }
-        input#autologin { margin : 0 5px 0 0; }
     }
 }
 
@@ -769,7 +810,7 @@ div {
         img { }
     }
     &.flash {
-        padding: 1em 1em 1em 40px;
+        padding : 1em 1em 1em 40px;
         &.error {
             background       : url(../img/icons/exclamation.png) 15px 50% no-repeat;
             color            : @errorText;
@@ -790,7 +831,6 @@ div {
         }
     }
     &.tooltip:hover span.tip { }
-    &.tabs-buttons { }
     &#issue-changesets {
         div.changeset { }
         p { }
@@ -866,6 +906,9 @@ div {
         }
         th { }
         td.total-hours { }
+    }
+    &.tab-content {
+        fieldset > legend { border : none; }
     }
     &#tab-content-members {
         .splitcontentleft { }
@@ -947,11 +990,12 @@ button {
     &.tab-left, &.tab-right {
         background-position : 50% 50%;
         background-repeat   : no-repeat;
+        height              : 30px;
     }
-    &.tab-left {
+    &.tab-left, &.tab-left:hover {
         background-image : url("../img/icons/bullet_arrow_left.png");
     }
-    &.tab-right {
+    &.tab-right, &.tab-right:hover {
         background-image : url("../img/icons/bullet_arrow_right.png");
     }
 }
@@ -1022,13 +1066,18 @@ input {
         }
     }
     &.hasDatepicker { width : 90px; /* same as .input-small */ }
+    &[type="checkbox"] {
+        margin : 0 5px 4px 0;
+    }
 }
 select {
     width : auto;
     &#issue_done_ratio { }
 }
 textarea {
-    &.wiki-edit { }
+    &.wiki-edit {
+        width  : 99%;
+        resize : vertical; }
     &.text_cf { }
     &#custom_field_possible_values { }
 }
@@ -1041,13 +1090,31 @@ textarea {
 #user_form select { }
 #user_identity_url { }
 #workflow_copy_form select { }
-
 .tabular {
-    p { }
+    p {
+        padding-left : 30%;
+        clear        : left;
+    }
     label {
-        &.floating { }
-        &.block { }
-        &.inline { }
+        width       : 30%;
+        float       : left;
+        text-align  : right;
+        margin-left : -32%;
+        &.floating {
+            margin-left : 0;
+            text-align  : left;
+        }
+        &.block {
+            text-align : left;
+            float      : none;
+            display    : block;
+            width      : auto;
+        }
+        &.inline {
+            float       : none;
+            width       : auto;
+            margin-left : 5px !important;
+        }
     }
     &.settings {
         p { }
@@ -1055,6 +1122,8 @@ textarea {
         &.textarea { }
     }
 }
+html>body .tabular p { overflow : hidden; }
+
 label {
     &.no-css { }
 }
