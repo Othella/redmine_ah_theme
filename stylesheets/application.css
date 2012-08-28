@@ -987,6 +987,7 @@ h1,h2,h3,h4,h5,h6{text-shadow:0 -1px 0 #dddddd,0 1px 0 #ffffff;font-family:Baske
 #sidebar form label{display:inline-block;}
 #footer{text-align:center;margin:1em auto;font-size:.9em;}
 .well{border-color:#e56045;}.well h3{margin-top:0;}
+.well>legend{margin-bottom:0;border:none;padding:0 1em;width:auto;}
 #admin-menu ul{margin:0;}
 #admin-menu li{list-style:none;padding:0 0 6px 0;margin:0;}
 #admin-menu a{background-position:0 40%;background-repeat:no-repeat;padding:2px 0 3px 20px;}#admin-menu a.projects{background-image:url(../img/icons/projects.png);}
@@ -1064,6 +1065,7 @@ tr.version.shared td.name{background:url(../img/icons/link.png) no-repeat 0% 70%
 tr.user.locked,tr.user.registered{color:#999999;}tr.user.locked a,tr.user.registered a{color:#999999;}
 tr.group a.toggle-all{display:inline;}
 tr.group:hover a.toggle-all{text-decoration:none;}
+td{-ms-word-break:break-all;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}
 td.assigned_to{white-space:normal;}
 td.center,td[align="center"]{text-align:center;}
 td.username img.gravatar{margin:0 .5em 0 0;vertical-align:top;}
@@ -1182,8 +1184,8 @@ img.ui-datepicker-trigger{cursor:pointer;vertical-align:middle;margin-left:4px;}
 .version.marker,.project.marker{background-image:url("../img/icons/version_marker.png");background-repeat:no-repeat;border:0;margin-left:-4px;margin-top:1px;}
 .version-behind-schedule a,.issue-behind-schedule a{color:#f89406;}
 .version-overdue a,.issue-overdue a,.project-overdue a{color:#9d261d;}
-.action-projects #content form label{padding-top:1em;display:inline-block;}
-.action-projects #content form select#status{margin-right:2em;}
+.action-projects #content form label,.controller-users #content form label{padding-top:1em;display:inline-block;}
+.action-projects #content form select#status,.controller-users #content form select#status,.action-projects #content form select#group_id,.controller-users #content form select#group_id{margin-right:2em;}
 .icon{background-position:0% 50%;background-repeat:no-repeat;padding-left:20px;padding-top:2px;padding-bottom:3px;display:inline;}
 .icon-add{background-image:url(../img/icons/add.png);}
 .icon-edit{background-image:url(../img/icons/edit.png);}

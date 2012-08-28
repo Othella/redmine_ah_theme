@@ -129,11 +129,13 @@ function ahInjectClasses() {
     // Reduce input size in contextual
     $('.contextual input, .contextual select').addClass('input-medium');
 
-    // Set form inline
-    $('.action-projects #content form, .action-users #content form').addClass('form-horizontal');
+    // Set form inline and format some elements
+    $('.action-projects #content form, .controller-users #content form').addClass('form-horizontal');
+    $('.controller-users #content form #name').addClass('input-medium');
 
     // Use table classes
     $('table.list').addClass('table table-condensed table-striped table-bordered');
+    $('table.list .btn').addClass('btn-small');
 
 }
 

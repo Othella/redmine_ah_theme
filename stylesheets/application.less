@@ -202,6 +202,12 @@ h1, h2, h3, h4, h5, h6 {
 .well {
     border-color : @ah_orange;
     h3 { margin-top : 0; }
+    & > legend {
+        margin-bottom : 0;
+        border        : none;
+        padding       : 0 1em;
+        width         : auto;
+    }
 }
 
 /***** Redmine generated elements ****/
@@ -581,6 +587,7 @@ tr {
 }
 
 td {
+    .word-break();
     &.hours {
         .hour-dec { }
     }
@@ -1318,12 +1325,13 @@ img.ui-datepicker-trigger {
 .issue-overdue a,
 .project-overdue a { color : @red; }
 
-.action-projects #content form {
+.action-projects #content form,
+.controller-users #content form {
     label {
         padding-top : 1em;
         display     : inline-block;
     }
-    select#status { margin-right : 2em; }
+    select#status, select#group_id { margin-right : 2em; }
 }
 
 .icon {
