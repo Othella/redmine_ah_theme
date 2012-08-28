@@ -300,6 +300,10 @@ em {
 
 /* Tables */
 table {
+    thead th {
+        #gradient > .vertical(lighten(@ah_lbeige, 15%), lighten(@ah_lbeige, 10%));
+        text-shadow : 0 -1px 0 @grayLighter, 0 1px 0 @white; // Letterpress effect
+    }
     &#time-report {
         td.hours { }
         th {
@@ -416,10 +420,8 @@ table {
         border          : lighten(@ah_orange, 20%) solid 1px;
         margin          : 0 0 .5em 0;
         thead th {
-            width       : 100% / 7;
-            padding     : .3em;
-            #gradient > .vertical(lighten(@ah_lbeige, 15%), lighten(@ah_lbeige, 10%));
-            text-shadow : 0 -1px 0 @grayLighter, 0 1px 0 @white; // Letterpress effect
+            width   : 100% / 7;
+            padding : .3em;
             .word-break;
             &.week-number { width : auto; }
         }
@@ -524,16 +526,30 @@ tr {
         &.idnt-9 td.subject { padding-left : 12.5em; }
     }
     &.entry {
+        font-size : .9em;
         td {
-            &.filename { }
-            &.filename_no_report { }
-            &.size { }
-            &.revision { }
-            &.author { }
-            &.age { }
+            white-space : nowrap;
+            &.filename { width : 30%; }
+            &.filename_no_report { width : 70%; }
+            &.size { text-align : right; }
+            &.revision { text-align : center; }
+            &.author { text-align : center; }
+            &.age { text-align : right; }
+        }
+        &.file {
+            td {
+                &.filename a { margin-left : 20px; }
+                &.filename_no_report a { margin-left : 20px; }
+            }
         }
     }
-    span.expander { background-image : url('../img/icons/bullet_toggle_plus.png'); }
+    span.expander {
+        background-image    : url('../img/icons/bullet_toggle_plus.png');
+        background-position : 2px 40%;
+        margin-left         : 0;
+        padding-left        : 10px;
+        cursor              : pointer;
+    }
     &.open span.expander { background-image : url('../img/icons/bullet_toggle_minus.png'); }
     &.changeset {
         ul, ol { }
@@ -1227,7 +1243,7 @@ span.required { color : @red; }
 
 #errorExplanation {
     padding          : 1em 1em 1em 40px;
-    background       : url(../img/icons/exclamation.png) 8px 50% no-repeat;
+    background       : url(../img/icons/exclamation.png) 15px 50% no-repeat;
     color            : @errorText;
     background-color : @errorBackground;
     border-color     : @errorBorder;
@@ -1617,7 +1633,6 @@ tr.context-menu-selection td { background-color : @ah_blue !important; }
 }
 
 /***** Media Queries ****/
-
 @media (max-width: 767px) {
 }
 

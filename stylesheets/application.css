@@ -1017,6 +1017,7 @@ a.sort.desc{background-image:url(../img/icons/sort_desc.png);}
 a.atom{background:url(../img/icons/feed.png) no-repeat 1px 50%;padding:2px 0px 3px 16px;}
 a.close-icon{display:block;margin-top:3px;overflow:hidden;width:12px;height:12px;background:transparent url("../img/icons/close.png") center center no-repeat;}a.close-icon:hover{background-image:url("../img/icons/close_hl.png");}
 em.info{color:#555555;font-size:.9em;}em.info.error{padding-left:20px;background:url(../img/icons/exclamation.png) no-repeat 0 50%;}
+table thead th{background-color:#fefcfb;background-image:-moz-linear-gradient(top, #ffffff, #fcf8f4);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#fcf8f4));background-image:-webkit-linear-gradient(top, #ffffff, #fcf8f4);background-image:-o-linear-gradient(top, #ffffff, #fcf8f4);background-image:linear-gradient(to bottom, #ffffff, #fcf8f4);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fffcf8f4', GradientType=0);text-shadow:0 -1px 0 #eeeeee,0 1px 0 #ffffff;}
 table.list th{text-align:center;}
 table.list td{vertical-align:middle;}
 table.list td.checkbox{text-align:center;}table.list td.checkbox input{margin:0;}
@@ -1029,7 +1030,7 @@ table.query-columns td.buttons{width:60px;}table.query-columns td.buttons input[
 table.transitions td.enabled{background-color:#dff0d8;}
 table.fields_permissions td.readonly{background-color:#eeeeee;}
 table.fields_permissions td.required{background-color:#f2dede;}
-table.cal{border-collapse:collapse;width:100%;border:#f2ad9e solid 1px;margin:0 0 .5em 0;}table.cal thead th{width:14.285714285714286%;padding:.3em;background-color:#fefcfb;background-image:-moz-linear-gradient(top, #ffffff, #fcf8f4);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#fcf8f4));background-image:-webkit-linear-gradient(top, #ffffff, #fcf8f4);background-image:-o-linear-gradient(top, #ffffff, #fcf8f4);background-image:linear-gradient(to bottom, #ffffff, #fcf8f4);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fffcf8f4', GradientType=0);text-shadow:0 -1px 0 #eeeeee,0 1px 0 #ffffff;-ms-word-break:break-all;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}table.cal thead th.week-number{width:auto;}
+table.cal{border-collapse:collapse;width:100%;border:#f2ad9e solid 1px;margin:0 0 .5em 0;}table.cal thead th{width:14.285714285714286%;padding:.3em;-ms-word-break:break-all;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}table.cal thead th.week-number{width:auto;}
 table.cal tbody tr{height:100px;}
 table.cal td{border:#f2ad9e solid 1px;vertical-align:top;font-size:.9em;}table.cal td.week-number{background-color:#fcf8f4;border:none;font-size:1em;padding:.3em;vertical-align:middle;text-align:center;text-shadow:0 -1px 0 #eeeeee,0 1px 0 #ffffff;}
 table.cal td.odd{background-color:#eeeeee;}table.cal td.odd p.day-num{color:#999999;}
@@ -1064,7 +1065,15 @@ tr.issue.idnt-6 td.subject{padding-left:8em;}
 tr.issue.idnt-7 td.subject{padding-left:9.5em;}
 tr.issue.idnt-8 td.subject{padding-left:11em;}
 tr.issue.idnt-9 td.subject{padding-left:12.5em;}
-tr span.expander{background-image:url('../img/icons/bullet_toggle_plus.png');}
+tr.entry{font-size:.9em;}tr.entry td{white-space:nowrap;}tr.entry td.filename{width:30%;}
+tr.entry td.filename_no_report{width:70%;}
+tr.entry td.size{text-align:right;}
+tr.entry td.revision{text-align:center;}
+tr.entry td.author{text-align:center;}
+tr.entry td.age{text-align:right;}
+tr.entry.file td.filename a{margin-left:20px;}
+tr.entry.file td.filename_no_report a{margin-left:20px;}
+tr span.expander{background-image:url('../img/icons/bullet_toggle_plus.png');background-position:2px 40%;margin-left:0;padding-left:10px;cursor:pointer;}
 tr.open span.expander{background-image:url('../img/icons/bullet_toggle_minus.png');}
 tr.message.locked td.subject{background:url(../img/icons/locked.png) no-repeat 0 1px;}
 tr.message.sticky td.subject{background:url(../img/icons/bullet_go.png) no-repeat 0 1px;}
@@ -1186,7 +1195,7 @@ html>body .tabular p{overflow:hidden;}
 span.required{color:#9d261d;}
 .summary{font-style:italic;}
 .other-formats span+span:before{content:" | ";}
-#errorExplanation{padding:1em 1em 1em 40px;background:url(../img/icons/exclamation.png) 8px 50% no-repeat;color:#b94a48;background-color:#f2dede;border-color:#eed3d7;}
+#errorExplanation{padding:1em 1em 1em 40px;background:url(../img/icons/exclamation.png) 15px 50% no-repeat;color:#b94a48;background-color:#f2dede;border-color:#eed3d7;}
 .nodata,.warning{color:#c09853;background-color:#fcf8e3;border-color:#fbeed5;padding:1em;margin:1em auto;}
 #ajax-indicator{position:fixed;background-color:#eeeeee;border:1px solid #999999;top:35%;left:40%;width:20%;font-weight:bold;text-align:center;padding:0.6em;z-index:100;opacity:0.5;}#ajax-indicator span{background:transparent url("../img/icons/loading.gif") 0 40% no-repeat;padding-left:26px;vertical-align:bottom;}
 img.ui-datepicker-trigger{cursor:pointer;vertical-align:middle;margin-left:4px;}

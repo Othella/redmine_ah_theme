@@ -142,7 +142,7 @@ function ahInjectClasses() {
     $('.controller-users #content form #name').addClass('input-medium');
 
     // Use table classes
-    $('table.list').addClass('table table-condensed table-striped table-bordered');
+    $('table.list').addClass('table table-condensed table-hover table-bordered');
     $('table.list .btn').addClass('btn-small'); // Small buttons
 
     // Use red button for delete account link
