@@ -1616,6 +1616,11 @@ tr.context-menu-selection td { background-color : @ah_blue !important; }
 }
 
 @media (max-width: 768px) {
+    #top-menu {
+        a.brand { margin : 6px auto; }
+        .btn-navbar { margin-right : 10px; }
+    }
+
     #header, #footer {
     }
 
@@ -1635,22 +1640,22 @@ tr.context-menu-selection td { background-color : @ah_blue !important; }
         box-shadow         : none;
         & .nav {
             .border-radius(4px);
-            background : #fff; /* whole background property since we use a background-image for gradient */
+            background : @white; /* whole background property since we use a background-image for gradient */
             border     : 1px solid #e5e5e5;
-            & > li {
-                float : none;
+            & > li { float : none;
                 & > a {
                     border : 0;
                     .border-radius(0);
+                    margin : 0;
                 }
-                & + li > a {
-                    border-top : 1px solid #e5e5e5;
-                }
+                & + li > a { border-top : 1px solid #e5e5e5; }
                 &:first-child > a,
                 &:first-child > a:hover {
-                    -webkit-border-radius : 4px 4px 0 0;
-                    -moz-border-radius    : 4px 4px 0 0;
-                    border-radius         : 4px 4px 0 0;
+                    .border-radius(4px 4px 0 0);
+                }
+                &:last-child > a,
+                &:last-child > a:hover {
+                    .border-radius(0 0 4px 4px);
                 }
             }
         }

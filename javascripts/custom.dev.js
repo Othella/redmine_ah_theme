@@ -125,7 +125,6 @@ function ahInjectClasses() {
     $('input[type="submit"]').addClass('btn-primary');
     $('.buttons a').wrap('<span class="btn"></span>');
     $('.tabs-buttons button').addClass('btn');
-    $('.tab-content .btn').addClass('btn-primary');
 
     // Reduce input size in contextual
     $('.contextual input, .contextual select').addClass('input-medium');
