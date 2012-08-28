@@ -74,7 +74,7 @@ function ahRebuildHeader() {
     $queryForm.addClass('form-search');
     $queryForm.find('input[type="text"]').addClass('search-query').attr('placeholder', 'Search...'); // use rounded corner
     $queryForm.find('label').addClass('hidden'); // hide label
-    $search.find('input, select').addClass('input-medium');
+    $search.find('input').addClass('input-medium');
 }
 
 function ahCustomizeMain() {
@@ -135,7 +135,7 @@ function ahInjectClasses() {
     $('.tabs-buttons button').addClass('btn');
 
     // Reduce input size in contextual
-    $('.contextual input, .contextual select').addClass('input-medium');
+    $('.contextual input').addClass('input-medium');
 
     // Set form inline and format some elements
     $('.action-projects #content form, .controller-users #content form').addClass('form-horizontal');

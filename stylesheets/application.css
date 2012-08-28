@@ -1103,7 +1103,6 @@ span.add_attachment a{padding-left:16px;background:url(../img/icons/bullet_add.p
 .highlight.token-2{background-color:#dff0d8;}
 .highlight.token-3{background-color:#d9edf7;}
 .contextual{float:right;white-space:nowrap;line-height:1.4em;margin-top:20px;padding-left:5px;font-size:.9em;}.contextual form,.contextual label{display:inline-block;}
-.contextual input,.contextual select{font-size:.9em;}
 .contextual a{margin-left:5px;}
 .message .contextual{margin-top:0;}
 p.other-formats{text-align:right;font-size:.9em;color:#555555;}
@@ -1179,12 +1178,11 @@ fieldset#filters td input,fieldset#filters td label{display:inline;}
 fieldset#filters td.field input[type="checkbox"]{margin:-3px 5px 0 0;}
 fieldset#filters td.values{white-space:nowrap;}
 fieldset#filters td.add-filter{text-align:right;vertical-align:top;}fieldset#filters td.add-filter label{margin-right:1em;}
-fieldset#filters select{width:auto;}
 input#openid_url{background:#ffffff url('../img/icons/openid-bg.gif') 0 50% no-repeat;}
 input#principal_search,input#user_search{background:url(../img/icons/magnifier.png) no-repeat 2px 50%;padding-left:20px;}input#principal_search.ajax-loading,input#user_search.ajax-loading{background-image:url("../img/icons/loading.gif");}
 input.hasDatepicker{width:90px;}
 input[type="checkbox"]{margin:0 5px 4px 0;}
-select{width:auto;}
+select{width:auto;font-size:.9em;}
 textarea.wiki-edit{width:98%;resize:vertical;}
 .tabular p{padding-left:30%;clear:left;}
 .tabular label{width:30%;float:left;text-align:right;margin-left:-32%;}.tabular label.floating{margin-left:0;text-align:left;}
