@@ -1159,7 +1159,7 @@ button.tab-left,button.tab-right{background-repeat:no-repeat;height:30px;}
 button.tab-left,button.tab-left:hover{background-image:url("../img/icons/bullet_arrow_left.png");background-position:50% 50%;}
 button.tab-right,button.tab-right:hover{background-image:url("../img/icons/bullet_arrow_right.png");background-position:50% 50%;}
 fieldset.collapsible.collapsed legend{background-image:url("../img/icons/bullet_toggle_plus.png");}
-fieldset.collapsible legend{background:transparent url("../img/icons/bullet_toggle_minus.png") right 40% no-repeat;cursor:pointer;margin-bottom:1em;}fieldset.collapsible legend+div{margin-top:1em;}
+fieldset.collapsible legend{background:transparent url("../img/icons/bullet_toggle_minus.png") right 40% no-repeat;cursor:pointer;margin-bottom:1em;}fieldset.collapsible legend+div{margin-top:1em;display:inline-block;}
 fieldset#notified_events br{display:none;}
 fieldset#notified_events .parent{padding-left:2em;}
 fieldset#notified_events p{margin:1em auto;}
@@ -1185,7 +1185,7 @@ html>body .tabular p{overflow:hidden;}
 span.required{color:#9d261d;}
 .summary{font-style:italic;}
 .other-formats span+span:before{content:" | ";}
-#errorExplanation{background:url(../img/icons/exclamation.png) 8px 50% no-repeat;color:#b94a48;background-color:#f2dede;border-color:#eed3d7;}
+#errorExplanation{padding:1em 1em 1em 40px;background:url(../img/icons/exclamation.png) 8px 50% no-repeat;color:#b94a48;background-color:#f2dede;border-color:#eed3d7;}
 .nodata,.warning{color:#c09853;background-color:#fcf8e3;border-color:#fbeed5;padding:1em;margin:1em auto;}
 #ajax-indicator{position:fixed;background-color:#eeeeee;border:1px solid #999999;top:35%;left:40%;width:20%;font-weight:bold;text-align:center;padding:0.6em;z-index:100;opacity:0.5;}#ajax-indicator span{background:transparent url("../img/icons/loading.gif") 0 40% no-repeat;padding-left:26px;vertical-align:bottom;}
 img.ui-datepicker-trigger{cursor:pointer;vertical-align:middle;margin-left:4px;}
