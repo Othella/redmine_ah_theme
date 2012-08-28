@@ -130,10 +130,10 @@ function ahInjectClasses() {
     $('.contextual input, .contextual select').addClass('input-medium');
 
     // Set form inline
-    $('.action-projects #content form').addClass('form-horizontal');
+    $('.action-projects #content form, .action-users #content form').addClass('form-horizontal');
 
     // Use table classes
-    $('table.list').addClass('table table-striped table-bordered');
+    $('table.list').addClass('table table-condensed table-striped table-bordered');
 
 }
 

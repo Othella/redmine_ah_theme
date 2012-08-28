@@ -128,9 +128,11 @@ h1, h2, h3, h4, h5, h6 {
 #content {
     .noleftmargin { margin-left : 0; }
     .tabs {
-        position : relative;
-        overflow : hidden;
-        height   : 2.6em;
+        position      : relative;
+        overflow      : hidden;
+        height        : 2.6em;
+        border-bottom : 1px solid @ah_orange;
+        margin-bottom : 1em;
         ul {
             position     : absolute;
             margin       : 0;
@@ -173,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
             right    : 0;
             bottom   : 0;
             width    : 65px;
-            height   : 34px;
+            height   : 36px;
         }
     }
 }
@@ -250,6 +252,7 @@ a {
     &.sort {
         background-position : 100% 50%;
         background-repeat   : no-repeat;
+        padding-right       : 16px;
         &.asc { background-image : url(../img/icons/sort_asc.png); }
         &.desc { background-image : url(../img/icons/sort_desc.png); }
     }
@@ -582,7 +585,7 @@ td {
         .hour-dec { }
     }
     &.assigned_to { white-space : normal; }
-    &.center { text-align : center; }
+    &.center, &[align="center"] { text-align : center; }
     &.username {
         img.gravatar {
             margin         : 0 .5em 0 0;
@@ -648,7 +651,7 @@ span.add_attachment {
     float        : right;
     white-space  : nowrap;
     line-height  : 1.4em;
-    margin-top   : 5px;
+    margin-top   : 20px;
     padding-left : 5px;
     font-size    : .9em;
     form, label { display : inline-block; }
@@ -998,15 +1001,16 @@ ul {
 
 button {
     &.tab-left, &.tab-right {
-        background-position : 50% 50%;
-        background-repeat   : no-repeat;
-        height              : 30px;
+        background-repeat : no-repeat;
+        height            : 30px;
     }
     &.tab-left, &.tab-left:hover {
-        background-image : url("../img/icons/bullet_arrow_left.png");
+        background-image    : url("../img/icons/bullet_arrow_left.png");
+        background-position : 50% 50%;
     }
     &.tab-right, &.tab-right:hover {
-        background-image : url("../img/icons/bullet_arrow_right.png");
+        background-image    : url("../img/icons/bullet_arrow_right.png");
+        background-position : 50% 50%;
     }
 }
 
