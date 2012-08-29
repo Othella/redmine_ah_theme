@@ -180,16 +180,14 @@ h1, h2, h3, h4, h5, h6 {
             height   : 36px;
         }
     }
-    div:not(.well) > h3 {
-        padding-top : 10px;
-        border-top  : 1px solid @ah_lbeige;
-    }
 }
 
 #sidebar {
     h3 {
         border-bottom  : 1px solid @ah_orange;
         padding-bottom : 6px;
+        border-top     : none;
+        paddding-top   : 0;
     }
     h4 { margin-top : 1.6em; }
     hr { }
@@ -212,7 +210,11 @@ h1, h2, h3, h4, h5, h6 {
 /***** Bootstrap cutsomization ****/
 .well {
     border-color : @ah_orange;
-    h3 { margin-top : 0; }
+    h3 {
+        margin-top  : 0;
+        border      : none;
+        padding-top : 0;
+    }
     & > legend {
         margin-bottom : 0;
         border        : none;
@@ -343,7 +345,10 @@ table {
                 a { }
             }
         }
-        caption { }
+        caption {
+            text-align : left;
+            margin     : 4px 5px 4px 0;
+        }
     }
     &.files {
         tr {
@@ -669,8 +674,21 @@ h2 {
     }
 }
 h3 {
-    &.comments { background : url(../img/icons/comment.png) no-repeat 0% 50%; padding-left : 20px; }
-    &.version { background : url(../img/icons/package.png) no-repeat 0% 50%; padding-left : 20px; }
+    padding-top : 10px;
+    border-top  : 1px solid @ah_lbeige;
+    &.comments {
+        background   : url(../img/icons/comment.png) no-repeat 0% 50%;
+        padding-left : 20px;
+    }
+    &.version {
+        background   : url(../img/icons/package.png) no-repeat 0% 22px;
+        padding-left : 25px;
+        &:first-of-type {
+            background-position : 0 50%;
+            border              : none;
+            padding-top         : 0;
+        }
+    }
     img.gravatar { margin : -4px 4px -4px 0; }
 }
 h4 {
@@ -1010,13 +1028,36 @@ div {
             }
             h2 { }
         }
+        table.progress {
+            float  : left;
+            margin : 0 10px 0 0;
+        }
+        p.pourcent + p.progress-info { margin : 5px 0; }
+        p.progress-info { font-size : .9em; }
     }
     &#version-summary {
+        float  : right;
+        width  : 28%;
+        margin : 0 0 10px 2%;
         fieldset {
-            &.time-tracking table { }
+            border  : 1px solid @ah_orange;
+            padding : 10px;
+            .border-radius(4px);
+            &.time-tracking table { width : 100%;
+                th { width : 130px; text-align : right; }
+                td { padding-left : 10px; text-align : left; }
+            }
+            legend {
+                font-size     : 1em;
+                padding       : 5px;
+                width         : auto;
+                border        : none;
+                margin-bottom : 0;
+                line-height   : 1;
+                select { margin-bottom : 0; }
+            }
         }
-        th { }
-        td.total-hours { }
+        th, td.total-hours { text-align : right; }
     }
     &.tab-content {
         fieldset > legend {
@@ -1052,7 +1093,10 @@ div {
         }
     }
 }
-body.controller-versions.action-show div#roadmap .related-issues { }
+body.controller-versions.action-show div#roadmap .related-issues {
+    width : 70%;
+    float : left;
+}
 
 ul {
     &.projects {
@@ -1318,8 +1362,6 @@ img.ui-datepicker-trigger {
     vertical-align : middle;
     margin-left    : 4px;
 }
-
-#roadmap table.progress td { }
 
 .diff_out {
     span { }
@@ -1709,6 +1751,11 @@ tr.context-menu-selection td { background-color : @ah_blue !important; }
                 }
             }
         }
+    }
+    body.controller-versions.action-show div#roadmap .related-issues { width : 100%; }
+    div#version-summary {
+        margin : 10px auto;
+        width  : 100%;
     }
 }
 

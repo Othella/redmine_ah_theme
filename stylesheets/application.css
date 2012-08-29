@@ -985,12 +985,11 @@ h1,h2,h3,h4,h5,h6{text-shadow:0 -1px 0 #dddddd,0 1px 0 #ffffff;font-family:Baske
 #content .tabs{position:relative;overflow:hidden;height:2.6em;border-bottom:1px solid #e56045;margin-bottom:1em;}#content .tabs ul{position:absolute;margin:0;bottom:0;width:88%;padding-left:.5em;height:2.6em;}#content .tabs ul li{position:relative;float:left;list-style-type:none;margin-right:1em;white-space:nowrap;background:#ffffff;}#content .tabs ul li a{display:block;border:#e56045 solid 1px;border-bottom-color:#ffffff;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0;border-radius:3px 3px 0 0;font-weight:bold;text-decoration:none;padding:.5em 1em;}#content .tabs ul li a:hover{text-decoration:none;}
 #content .tabs ul li a.selected{background-color:#e97760;background-image:-moz-linear-gradient(top, #eb8672, #e56045);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#eb8672), to(#e56045));background-image:-webkit-linear-gradient(top, #eb8672, #e56045);background-image:-o-linear-gradient(top, #eb8672, #e56045);background-image:linear-gradient(to bottom, #eb8672, #e56045);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeb8672', endColorstr='#ffe56045', GradientType=0);text-shadow:0 -1px 0 #d93e1e,0 1px 0 rgba(255, 255, 255, 0.5) ;border-bottom-color:#e56045;color:#ffffff;}#content .tabs ul li a.selected:hover{text-shadow:none;}
 #content .tabs div.tabs-buttons{position:absolute;right:0;bottom:0;width:65px;height:36px;}
-#content div:not(.well)>h3{padding-top:10px;border-top:1px solid #efdfce;}
-#sidebar h3{border-bottom:1px solid #e56045;padding-bottom:6px;}
+#sidebar h3{border-bottom:1px solid #e56045;padding-bottom:6px;border-top:none;paddding-top:0;}
 #sidebar h4{margin-top:1.6em;}
 #sidebar form label{display:inline-block;}
 #footer{text-align:center;margin:1em auto;font-size:.9em;}
-.well{border-color:#e56045;}.well h3{margin-top:0;}
+.well{border-color:#e56045;}.well h3{margin-top:0;border:none;padding-top:0;}
 .well>legend{margin-bottom:0;border:none;padding:0 1em;width:auto;}
 #admin-menu ul{margin:0;}
 #admin-menu li{list-style:none;padding:0 0 6px 0;margin:0;}
@@ -1022,6 +1021,7 @@ table thead th{background-color:#fefcfb;background-image:-moz-linear-gradient(to
 table.list{width:100%;}table.list th{text-align:center;}
 table.list td{vertical-align:middle;}table.list td.id{width:2%;word-break:normal;text-align:center;}
 table.list td.checkbox{width:15px;text-align:center;}table.list td.checkbox input{margin:0;}
+table.list caption{text-align:left;margin:4px 5px 4px 0;}
 table.members td.group{padding-left:20px;background:url(../img/icons/group.png) no-repeat 0% 50%;}
 table.permissions td.role{color:#999999;}
 table.list tbody tr.group span.count{color:#999999;}
@@ -1093,8 +1093,8 @@ td.assigned_to{white-space:normal;}
 td.center,td[align="center"]{text-align:center;}
 td.username img.gravatar{margin:0 .5em 0 0;vertical-align:top;}
 h2{border-bottom:#e56045 double 3px;margin-bottom:15px;padding-bottom:5px;}h2 img{vertical-align:middle;}h2 img.gravatar{margin:-7px 10px 0 0;}
-h3.comments{background:url(../img/icons/comment.png) no-repeat 0% 50%;padding-left:20px;}
-h3.version{background:url(../img/icons/package.png) no-repeat 0% 50%;padding-left:20px;}
+h3{padding-top:10px;border-top:1px solid #efdfce;}h3.comments{background:url(../img/icons/comment.png) no-repeat 0% 50%;padding-left:20px;}
+h3.version{background:url(../img/icons/package.png) no-repeat 0% 22px;padding-left:25px;}h3.version:first-of-type{background-position:0 50%;border:none;padding-top:0;}
 h3 img.gravatar{margin:-4px 4px -4px 0;}
 h4 img.gravatar{margin:-6px 4px -4px 0;}
 div.issues h3{background:url(../img/icons/ticket.png) no-repeat 0% 50%;padding-left:20px;}
@@ -1160,7 +1160,15 @@ div#activity dt{clear:left;background-position:0 50%;background-repeat:no-repeat
 div#activity dt.me .time{border-bottom:1px solid #95a8a0;}
 div#activity dt .time{color:#95a8a0;font-size:.9em;}
 div#activity span .project:after{content:" -";}
+div#roadmap table.progress{float:left;margin:0 10px 0 0;}
+div#roadmap p.pourcent+p.progress-info{margin:5px 0;}
+div#roadmap p.progress-info{font-size:.9em;}
+div#version-summary{float:right;width:28%;margin:0 0 10px 2%;}div#version-summary fieldset{border:1px solid #e56045;padding:10px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}div#version-summary fieldset.time-tracking table{width:100%;}div#version-summary fieldset.time-tracking table th{width:130px;text-align:right;}
+div#version-summary fieldset.time-tracking table td{padding-left:10px;text-align:left;}
+div#version-summary fieldset legend{font-size:1em;padding:5px;width:auto;border:none;margin-bottom:0;line-height:1;}div#version-summary fieldset legend select{margin-bottom:0;}
+div#version-summary th,div#version-summary td.total-hours{text-align:right;}
 div.tab-content fieldset>legend{margin-bottom:0;border:none;}
+body.controller-versions.action-show div#roadmap .related-issues{width:70%;float:left;}
 ul.projects{padding-left:1em;}ul.projects ul{padding-left:1.6em;}
 ul.projects.root{margin:0;padding:0;}
 ul.projects li{list-style:none;}
@@ -1346,4 +1354,4 @@ tr.context-menu-selection td{background-color:#007aa0 !important;}
 .syntaxhl .head{color:#f8f;background:#505;}.syntaxhl .head .filename{color:#fff;}
 .syntaxhl .head .head{color:#f4f;}
 .hidden-for-sighted{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
-@media (max-width:767px){}@media (max-width:768px){#top-menu a.brand{margin:6px auto;} #top-menu .btn-navbar{margin-right:10px;} #main{margin-right:-20px;margin-left:-20px;} #main-menu{position:static;top:auto;z-index:auto;width:auto;height:auto;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}#main-menu .nav{-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;background:#ffffff;border:1px solid #e5e5e5;}#main-menu .nav>li{float:none;}#main-menu .nav>li>a{border:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;margin:0;} #main-menu .nav>li+li>a{border-top:1px solid #e5e5e5;} #main-menu .nav>li:first-child>a,#main-menu .nav>li:first-child>a:hover{-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0;} #main-menu .nav>li:last-child>a,#main-menu .nav>li:last-child>a:hover{-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px;}}@media (max-width:979px){#top-menu{margin-bottom:0;}}@media (min-width:980px){#header{margin-top:34px;}}@media print{#top-menu,#header,#main-menu,#sidebar,#footer,.contextual,.other-formats{display:none;} #main{background:#fff;} #content{width:99%;margin:0;padding:0;border:0;background:#fff;overflow:visible !important;} #wiki_add_attachment{display:none;} .hide-when-print{display:none;} .autoscroll{overflow-x:visible;} table.list{margin-top:0.5em;} table.list th,table.list td{border:1px solid #aaa;}}
+@media (max-width:767px){}@media (max-width:768px){#top-menu a.brand{margin:6px auto;} #top-menu .btn-navbar{margin-right:10px;} #main{margin-right:-20px;margin-left:-20px;} #main-menu{position:static;top:auto;z-index:auto;width:auto;height:auto;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}#main-menu .nav{-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;background:#ffffff;border:1px solid #e5e5e5;}#main-menu .nav>li{float:none;}#main-menu .nav>li>a{border:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;margin:0;} #main-menu .nav>li+li>a{border-top:1px solid #e5e5e5;} #main-menu .nav>li:first-child>a,#main-menu .nav>li:first-child>a:hover{-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0;} #main-menu .nav>li:last-child>a,#main-menu .nav>li:last-child>a:hover{-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px;} body.controller-versions.action-show div#roadmap .related-issues{width:100%;} div#version-summary{margin:10px auto;width:100%;}}@media (max-width:979px){#top-menu{margin-bottom:0;}}@media (min-width:980px){#header{margin-top:34px;}}@media print{#top-menu,#header,#main-menu,#sidebar,#footer,.contextual,.other-formats{display:none;} #main{background:#fff;} #content{width:99%;margin:0;padding:0;border:0;background:#fff;overflow:visible !important;} #wiki_add_attachment{display:none;} .hide-when-print{display:none;} .autoscroll{overflow-x:visible;} table.list{margin-top:0.5em;} table.list th,table.list td{border:1px solid #aaa;}}
