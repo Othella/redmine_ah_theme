@@ -180,6 +180,10 @@ h1, h2, h3, h4, h5, h6 {
             height   : 36px;
         }
     }
+    div:not(.well) > h3 {
+        padding-top : 10px;
+        border-top  : 1px solid @ah_lbeige;
+    }
 }
 
 #sidebar {
@@ -319,11 +323,17 @@ table {
         .hours-dec { }
     }
     &.list {
+        width : 100%;
         th { text-align : center; }
         td {
             vertical-align : middle;
-            &.id { }
+            &.id {
+                width      : 2%;
+                word-break : normal;
+                text-align : center;
+            }
             &.checkbox {
+                width      : 15px;
                 text-align : center;
                 input {
                     margin : 0;
@@ -482,6 +492,11 @@ table {
             &.todo { background-color : @successBackground !important; }
         }
     }
+    &.revision-info {
+        width         : auto;
+        margin-bottom : 10px;
+        td { padding : 2px 5px !important; }
+    }
     td { }
     p { }
 }
@@ -552,11 +567,19 @@ tr {
     }
     &.open span.expander { background-image : url('../img/icons/bullet_toggle_minus.png'); }
     &.changeset {
+        font-size : .9em;
         ul, ol { }
         td {
-            &.revision_graph { }
-            &.author { }
-            &.committed_on { }
+            &.revision_graph {
+                background-color : lighten(@ah_lbeige, 10%);
+                width            : 15%;
+            }
+            &.author, &.committed_on {
+                text-align  : center;
+                white-space : nowrap;
+                width       : 15%;
+            }
+            &.comments p { margin : 0; }
         }
     }
     &.message {
@@ -642,7 +665,7 @@ h2 {
     padding-bottom : 5px;
     img {
         vertical-align : middle;
-        &.gravatar { margin : -2px 4px -4px 0; }
+        &.gravatar { margin : -7px 10px 0 0; }
     }
 }
 h3 {
