@@ -828,7 +828,10 @@ div {
             div div { }
             p { }
             & > div > p { }
-            h3 { margin : 0; }
+            h3 {
+                border: 0 !important;
+                margin : 0;
+            }
         }
         p.author { font-size : .9em; }
         span.private { }
@@ -976,9 +979,12 @@ div {
             clear               : left;
             background-position : 0 50%;
             background-repeat   : no-repeat;
-            padding-left        : 20px;
+            padding-left        : 15px;
             line-height         : 1.5em;
-            img.gravatar { float : left; margin : 0 1em 1em 0; }
+            img.gravatar {
+                float : left;
+                margin : 0 10px 10px 10px;
+            }
             &.me .time { border-bottom : 1px solid @ah_lblue; }
             .time {
                 color     : @ah_lblue;

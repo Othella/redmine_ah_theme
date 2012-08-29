@@ -1134,7 +1134,7 @@ dt.document{background-image:url(../img/icons/document.png);}
 dt.project{background-image:url(../img/icons/projects.png);}
 dt.time-entry{background-image:url(../img/icons/time.png);}
 div.issue{border:1px solid #cfcab4;background-color:#fcfaf7;background-image:-moz-linear-gradient(top, #fdfbf8, #fcf8f4);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#fdfbf8), to(#fcf8f4));background-image:-webkit-linear-gradient(top, #fdfbf8, #fcf8f4);background-image:-o-linear-gradient(top, #fdfbf8, #fcf8f4);background-image:linear-gradient(to bottom, #fdfbf8, #fcf8f4);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffdfbf8', endColorstr='#fffcf8f4', GradientType=0);padding:10px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
-div.issue div.subject h3{margin:0;}
+div.issue div.subject h3{border:0 !important;margin:0;}
 div.issue p.author{font-size:.9em;}
 div.issue .next-prev-links{font-size:.9em;color:#999999;}
 div.issue table.attributes{text-align:left;width:100%;}div.issue table.attributes th{width:22%;}
@@ -1156,7 +1156,7 @@ div#search-results span.description{display:block;color:#999999;}
 div#activity dl{margin-left:1em;}
 div#activity dd{margin-bottom:1em;padding-left:18px;font-size:.9em;}div#activity dd .description{font-style:italic;}
 div#activity dd span.description{display:block;color:#999999;}
-div#activity dt{clear:left;background-position:0 50%;background-repeat:no-repeat;padding-left:20px;line-height:1.5em;}div#activity dt img.gravatar{float:left;margin:0 1em 1em 0;}
+div#activity dt{clear:left;background-position:0 50%;background-repeat:no-repeat;padding-left:15px;line-height:1.5em;}div#activity dt img.gravatar{float:left;margin:0 10px 10px 10px;}
 div#activity dt.me .time{border-bottom:1px solid #95a8a0;}
 div#activity dt .time{color:#95a8a0;font-size:.9em;}
 div#activity span .project:after{content:" -";}
